@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O4Q-xz-aIi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwZ-pW-5FY">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AH-fr-V4h">
+                                        <rect key="frame" x="8" y="8" width="62" height="30"/>
+                                        <state key="normal" title="普通礼物"/>
+                                        <connections>
+                                            <action selector="commontGift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gm5-Eh-o7S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLG-fJ-uXl">
+                                        <rect key="frame" x="78" y="8" width="82" height="30"/>
+                                        <state key="normal" title="普通礼物 +1"/>
+                                        <connections>
+                                            <action selector="commontGiftX2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVV-Ij-sAi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQt-bT-rXp">
+                                        <rect key="frame" x="168" y="8" width="39" height="30"/>
+                                        <state key="normal" title=" 咖啡 "/>
+                                        <connections>
+                                            <action selector="coffeeGift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="irl-BD-CJd"/>
+                                            <action selector="commontGiftX2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bU-9d-6qA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.13511344178082191" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9AH-fr-V4h" firstAttribute="leading" secondItem="pwZ-pW-5FY" secondAttribute="leading" constant="8" id="1rJ-be-n1v"/>
+                                    <constraint firstItem="hQt-bT-rXp" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="6cG-aB-UHh"/>
+                                    <constraint firstItem="lLG-fJ-uXl" firstAttribute="leading" secondItem="9AH-fr-V4h" secondAttribute="trailing" constant="8" id="Aua-AD-0hI"/>
+                                    <constraint firstItem="lLG-fJ-uXl" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="Sy6-rU-pFT"/>
+                                    <constraint firstItem="9AH-fr-V4h" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="cNQ-kW-Mqo"/>
+                                    <constraint firstItem="hQt-bT-rXp" firstAttribute="leading" secondItem="lLG-fJ-uXl" secondAttribute="trailing" constant="8" id="cnf-SZ-8bZ"/>
+                                    <constraint firstAttribute="height" constant="128" id="dL3-2m-lLR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pwZ-pW-5FY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Rs-ab-cjQ"/>
+                            <constraint firstItem="O4Q-xz-aIi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4eH-e8-W7k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="bottom" id="OIy-oW-PLX"/>
+                            <constraint firstAttribute="trailing" secondItem="O4Q-xz-aIi" secondAttribute="trailing" id="VC7-hr-KyQ"/>
+                            <constraint firstAttribute="trailing" secondItem="pwZ-pW-5FY" secondAttribute="trailing" id="e0c-qw-u57"/>
+                            <constraint firstItem="O4Q-xz-aIi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="klo-sa-Ic0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O4Q-xz-aIi" secondAttribute="bottom" id="oXJ-Ya-0BX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="O4Q-xz-aIi" id="WFl-5p-7TZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

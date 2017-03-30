@@ -13,6 +13,16 @@
 		2ECBFCFB1E8A11890095C128 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECBFCF91E8A11890095C128 /* Main.storyboard */; };
 		2ECBFCFD1E8A11890095C128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECBFCFC1E8A11890095C128 /* Assets.xcassets */; };
 		2ECBFD001E8A11890095C128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECBFCFE1E8A11890095C128 /* LaunchScreen.storyboard */; };
+		2ECBFD0D1E8A28110095C128 /* XWUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD0C1E8A28110095C128 /* XWUserInfo.m */; };
+		2ECBFD101E8A28770095C128 /* XWGiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD0F1E8A28770095C128 /* XWGiftModel.m */; };
+		2ECBFD131E8A2A700095C128 /* XWAnimOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD121E8A2A700095C128 /* XWAnimOperationManager.m */; };
+		2ECBFD161E8A2D9E0095C128 /* XWAnimationImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD151E8A2D9E0095C128 /* XWAnimationImageCache.m */; };
+		2ECBFD191E8A2F070095C128 /* XWBaseAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD181E8A2F070095C128 /* XWBaseAnimView.m */; };
+		2ECBFD1C1E8A2F620095C128 /* XWShakeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD1B1E8A2F620095C128 /* XWShakeLabel.m */; };
+		2ECBFD1F1E8A33410095C128 /* UIColor+XWColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD1E1E8A33410095C128 /* UIColor+XWColor.m */; };
+		2ECBFD261E8A394A0095C128 /* XWAnimOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD251E8A394A0095C128 /* XWAnimOperation.m */; };
+		2ECBFD291E8A39960095C128 /* XWPresentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD281E8A39960095C128 /* XWPresentView.m */; };
+		2ECBFD4B1E8B47940095C128 /* XWRightAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,27 @@
 		2ECBFCFC1E8A11890095C128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ECBFCFF1E8A11890095C128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ECBFD011E8A11890095C128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ECBFD0B1E8A28110095C128 /* XWUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWUserInfo.h; sourceTree = "<group>"; };
+		2ECBFD0C1E8A28110095C128 /* XWUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWUserInfo.m; sourceTree = "<group>"; };
+		2ECBFD0E1E8A28770095C128 /* XWGiftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWGiftModel.h; sourceTree = "<group>"; };
+		2ECBFD0F1E8A28770095C128 /* XWGiftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWGiftModel.m; sourceTree = "<group>"; };
+		2ECBFD111E8A2A700095C128 /* XWAnimOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWAnimOperationManager.h; sourceTree = "<group>"; };
+		2ECBFD121E8A2A700095C128 /* XWAnimOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWAnimOperationManager.m; sourceTree = "<group>"; };
+		2ECBFD141E8A2D9E0095C128 /* XWAnimationImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWAnimationImageCache.h; sourceTree = "<group>"; };
+		2ECBFD151E8A2D9E0095C128 /* XWAnimationImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWAnimationImageCache.m; sourceTree = "<group>"; };
+		2ECBFD171E8A2F070095C128 /* XWBaseAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWBaseAnimView.h; sourceTree = "<group>"; };
+		2ECBFD181E8A2F070095C128 /* XWBaseAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWBaseAnimView.m; sourceTree = "<group>"; };
+		2ECBFD1A1E8A2F620095C128 /* XWShakeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWShakeLabel.h; sourceTree = "<group>"; };
+		2ECBFD1B1E8A2F620095C128 /* XWShakeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWShakeLabel.m; sourceTree = "<group>"; };
+		2ECBFD1D1E8A33410095C128 /* UIColor+XWColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XWColor.h"; sourceTree = "<group>"; };
+		2ECBFD1E1E8A33410095C128 /* UIColor+XWColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XWColor.m"; sourceTree = "<group>"; };
+		2ECBFD201E8A34E00095C128 /* XWLiveGiftAnimationHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWLiveGiftAnimationHeader.h; sourceTree = "<group>"; };
+		2ECBFD241E8A394A0095C128 /* XWAnimOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWAnimOperation.h; sourceTree = "<group>"; };
+		2ECBFD251E8A394A0095C128 /* XWAnimOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWAnimOperation.m; sourceTree = "<group>"; };
+		2ECBFD271E8A39960095C128 /* XWPresentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWPresentView.h; sourceTree = "<group>"; };
+		2ECBFD281E8A39960095C128 /* XWPresentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWPresentView.m; sourceTree = "<group>"; };
+		2ECBFD491E8B47940095C128 /* XWRightAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWRightAnimView.h; sourceTree = "<group>"; };
+		2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWRightAnimView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +89,7 @@
 		2ECBFCEF1E8A11890095C128 /* XWLiveAnimtionsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2ECBFD071E8A27E00095C128 /* XWLiveAnimation */,
 				2ECBFCF31E8A11890095C128 /* AppDelegate.h */,
 				2ECBFCF41E8A11890095C128 /* AppDelegate.m */,
 				2ECBFCF61E8A11890095C128 /* ViewController.h */,
@@ -77,6 +109,58 @@
 				2ECBFCF11E8A11890095C128 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2ECBFD071E8A27E00095C128 /* XWLiveAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2ECBFD081E8A27E00095C128 /* Model */,
+				2ECBFD091E8A27E00095C128 /* Tools */,
+				2ECBFD0A1E8A27E00095C128 /* View */,
+				2ECBFD111E8A2A700095C128 /* XWAnimOperationManager.h */,
+				2ECBFD121E8A2A700095C128 /* XWAnimOperationManager.m */,
+			);
+			path = XWLiveAnimation;
+			sourceTree = "<group>";
+		};
+		2ECBFD081E8A27E00095C128 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2ECBFD0B1E8A28110095C128 /* XWUserInfo.h */,
+				2ECBFD0C1E8A28110095C128 /* XWUserInfo.m */,
+				2ECBFD0E1E8A28770095C128 /* XWGiftModel.h */,
+				2ECBFD0F1E8A28770095C128 /* XWGiftModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2ECBFD091E8A27E00095C128 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2ECBFD141E8A2D9E0095C128 /* XWAnimationImageCache.h */,
+				2ECBFD151E8A2D9E0095C128 /* XWAnimationImageCache.m */,
+				2ECBFD241E8A394A0095C128 /* XWAnimOperation.h */,
+				2ECBFD251E8A394A0095C128 /* XWAnimOperation.m */,
+				2ECBFD1D1E8A33410095C128 /* UIColor+XWColor.h */,
+				2ECBFD1E1E8A33410095C128 /* UIColor+XWColor.m */,
+				2ECBFD201E8A34E00095C128 /* XWLiveGiftAnimationHeader.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2ECBFD0A1E8A27E00095C128 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2ECBFD1A1E8A2F620095C128 /* XWShakeLabel.h */,
+				2ECBFD1B1E8A2F620095C128 /* XWShakeLabel.m */,
+				2ECBFD171E8A2F070095C128 /* XWBaseAnimView.h */,
+				2ECBFD181E8A2F070095C128 /* XWBaseAnimView.m */,
+				2ECBFD271E8A39960095C128 /* XWPresentView.h */,
+				2ECBFD281E8A39960095C128 /* XWPresentView.m */,
+				2ECBFD491E8B47940095C128 /* XWRightAnimView.h */,
+				2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +236,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECBFCF81E8A11890095C128 /* ViewController.m in Sources */,
+				2ECBFD0D1E8A28110095C128 /* XWUserInfo.m in Sources */,
 				2ECBFCF51E8A11890095C128 /* AppDelegate.m in Sources */,
+				2ECBFD131E8A2A700095C128 /* XWAnimOperationManager.m in Sources */,
+				2ECBFD4B1E8B47940095C128 /* XWRightAnimView.m in Sources */,
+				2ECBFD1F1E8A33410095C128 /* UIColor+XWColor.m in Sources */,
+				2ECBFD291E8A39960095C128 /* XWPresentView.m in Sources */,
+				2ECBFD1C1E8A2F620095C128 /* XWShakeLabel.m in Sources */,
+				2ECBFD261E8A394A0095C128 /* XWAnimOperation.m in Sources */,
+				2ECBFD101E8A28770095C128 /* XWGiftModel.m in Sources */,
+				2ECBFD191E8A2F070095C128 /* XWBaseAnimView.m in Sources */,
 				2ECBFCF21E8A11890095C128 /* main.m in Sources */,
+				2ECBFD161E8A2D9E0095C128 /* XWAnimationImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,13 +22,17 @@
 - (IBAction)showLocalFlashAnim:(UIButton *)sender {
     NSString *flashName = [[self flashArr] objectAtIndex:arc4random_uniform(5)];
     NSLog(@"flashName: %@",flashName);
-    [[XWFlashManager shareInstance] playFlashAnimationWithName:flashName];
+    [[XWFlashManager shareInstance] playFlashAnimationWithName:@"hua"];
 }
 - (IBAction)showNetworkFlashAnim:(UIButton *)sender {
     [[XWFlashManager shareInstance] playNetWorkFlashAnimationWithURL:@"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zip"];
 }
 - (IBAction)showFlashAnim:(UIButton *)sender {
-    [[XWFlashManager shareInstance] playNetWorkFlashAnimationWithURL:@"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zip"];
+    NSString *flashName = [[self flashArr] objectAtIndex:arc4random_uniform(5)];
+    NSLog(@"flashName: %@",flashName);
+    [[XWFlashManager shareInstance] playFlashAnimationWithName:flashName];
+
+//    [[XWFlashManager shareInstance] playNetWorkFlashAnimationWithURL:@"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zip"];
 }
 
 - (void)viewDidLoad {
