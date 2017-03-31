@@ -10,7 +10,6 @@
 
 #import "FlashViewNew.h"
 #import "FlashViewDownloader.h"
-#import "MBProgressHUD+XW.h"
 #import "ZipArchive.h"
 
 
@@ -33,22 +32,22 @@ static XWFlashManager *_defaultManager;
 
 
 
-- (void)playFlashAnimationWithName:(NSString *)animName {
+- (void)playFlashAnimationWithName:(NSString *)animName endBlock:(FlashAnimCallback)animEnd{
     
     if ([XWFlashManager isOrientationPortrait]) {
-        [self startFlashAnimation:self.flashViewOrientationVer animName:animName];
+        [self startFlashAnimation:self.flashViewOrientationVer animName:animName endBlock:animEnd];
     }else{
-        [self startFlashAnimation:self.flashViewOrientationHor animName:animName];
+        [self startFlashAnimation:self.flashViewOrientationHor animName:animName endBlock:animEnd];
     }
 }
 
 
--(void)playNetWorkFlashAnimationWithURL:(NSString *)giftUrl  {
+-(void)playNetWorkFlashAnimationWithURL:(NSString *)giftUrl endBlock:(FlashAnimCallback)animEnd {
     
     NSString *animFlaName = [[giftUrl lastPathComponent] stringByDeletingPathExtension];
     if ([FlashViewNew isAnimExist:animFlaName]) {
         NSLog(@"动画文件存在");
-        [self playFlashAnimationWithName:animFlaName];
+        [self playFlashAnimationWithName:animFlaName endBlock:animEnd];
         return;
     }
     
@@ -57,16 +56,16 @@ static XWFlashManager *_defaultManager;
     __weak XWFlashManager *weakSelf = self;
     [downloader downloadAnimFileWithUrl:giftUrl saveFileName:@"heiniao.zip" animFlaName:animFlaName version:@"1" downType:ZIP percentCb:^(float per) {
         NSLog(@"下载进度:%f",per);
-        [MBProgressHUD showHUD];
+        
         
     } completeCb:^(BOOL succ) {
         if (succ) {
-            [weakSelf playFlashAnimationWithName:animFlaName];
+            [weakSelf playFlashAnimationWithName:animFlaName endBlock:animEnd];
             NSLog(@"动画下载成功并播放");
         }else{
             NSLog(@"下载动画后播放失败");
         }
-        [MBProgressHUD hide];
+        
     }];
 
 }
@@ -76,7 +75,7 @@ static XWFlashManager *_defaultManager;
 #pragma mark FlashViewDownloadDelegate 自定义下载文件的函数，可以自己选择下载和解压文件的方法
 -(void)downloadFlashFileWithUrl:(NSString *)url outFile:(NSString *)outFile percentCb:(DownloadPercentCallback)percentCb completeCb:(DownloadCompleteCallback)completeCb{
     NSLog(@"开始下载:%@", url);
-    [MBProgressHUD showHUD];
+    
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
@@ -95,7 +94,7 @@ static XWFlashManager *_defaultManager;
         }
         //关闭loadingview
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hide];
+            
         });
     }];
     [downloadTask resume];
@@ -114,7 +113,7 @@ static XWFlashManager *_defaultManager;
     return NO;
 }
 
-- (void)startFlashAnimation:(FlashViewNew *)flashViewNew animName:(NSString *)animName{
+- (void)startFlashAnimation:(FlashViewNew *)flashViewNew animName:(NSString *)animName endBlock:(FlashAnimCallback)animEnd{
 
     
     flashViewNew.userInteractionEnabled = NO;
@@ -144,10 +143,13 @@ static XWFlashManager *_defaultManager;
                 [weakFlashView removeFromSuperview];
                 weakCtl.currAnimIndex = 0;
                 weakCtl.currAnim = nil;
+                if (animEnd) {
+                    animEnd();
+                }
             }else{
                 weakCtl.currAnimIndex++;
                 
-                [weakCtl startFlashAnimation:weakFlashView animName:animName];
+                [weakCtl startFlashAnimation:weakFlashView animName:animName endBlock:animEnd];
             }
         }
     };
@@ -215,7 +217,7 @@ static XWFlashManager *_defaultManager;
     if (!_flashViewOrientationHor) {
         _flashViewOrientationHor = [[FlashViewNew alloc] init];
         _flashViewOrientationHor.designScreenOrientation = FlashViewScreenOrientationHor;
-        _flashViewOrientationHor.screenOrientation = FlashViewScreenOrientationHor;
+        _flashViewOrientationHor.screenOrientation = FlashViewScreenOrientationNone;
         _flashViewOrientationHor.animPosMask = FlashViewAnimPosMaskVerCenter | FlashViewAnimPosMaskHorCenter;
     }
     return _flashViewOrientationHor;

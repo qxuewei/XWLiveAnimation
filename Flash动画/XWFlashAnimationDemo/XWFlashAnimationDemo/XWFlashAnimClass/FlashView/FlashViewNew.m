@@ -126,7 +126,10 @@
         default:
             break;
     }
-    self.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
+    self.frame = CGRectMake(0, 0, FLASH_VIEW_WIDTH, FLASH_VIEW_HEIGHT);
+    self.backgroundColor = [UIColor greenColor];
+    CGPoint centerPoint = CGPointMake([UIScreen mainScreen].bounds.size.width * 0.5, [UIScreen mainScreen].bounds.size.height * 0.5);
+    self.center = centerPoint;
     
     mFileManager = [NSFileManager defaultManager];
     mMainBundle = [NSBundle mainBundle];
@@ -197,6 +200,7 @@
 -(UIView *)animView{
     if (!_animView) {
         UIView *animView = [[UIView alloc] init];
+        animView.backgroundColor = [UIColor lightGrayColor];
         animView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:animView];
         //top

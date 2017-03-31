@@ -6,6 +6,10 @@
 
 #import <Foundation/Foundation.h>
 
+//flash模板长宽
+#define FLASH_VIEW_WIDTH 200.0
+#define FLASH_VIEW_HEIGHT 200.0
+
 //屏幕尺寸
 //当前屏幕尺寸
 #define FLASH_VIEW_SCREEN_SIZE [UIScreen mainScreen].bounds.size
@@ -102,4 +106,7 @@ typedef enum : NSUInteger {
 
 //事件回调block
 typedef void (^FlashUIntCallback)(FlashViewEvent, id);
+
+//事件回调block
+typedef void (^FlashAnimCallback)();
 

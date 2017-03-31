@@ -12,14 +12,20 @@
 		2E6EACDA1E83B23D00220589 /* MBProgressHUD+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6EACD61E83B23D00220589 /* MBProgressHUD+XW.m */; };
 		2E6EACDB1E83B23D00220589 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6EACD81E83B23D00220589 /* MBProgressHUD.m */; };
 		2E6EACDC1E83B23D00220589 /* XWHUDImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EACD91E83B23D00220589 /* XWHUDImages.bundle */; };
-		2E9B2F791E8D0838008D5EE6 /* h01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B2F711E8D0838008D5EE6 /* h01.png */; };
-		2E9B2F7A1E8D0838008D5EE6 /* h02.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B2F721E8D0838008D5EE6 /* h02.png */; };
-		2E9B2F7B1E8D0838008D5EE6 /* h03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B2F731E8D0838008D5EE6 /* h03.png */; };
-		2E9B2F7C1E8D0838008D5EE6 /* h04.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B2F741E8D0838008D5EE6 /* h04.png */; };
-		2E9B2F7D1E8D0838008D5EE6 /* h05.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B2F751E8D0838008D5EE6 /* h05.png */; };
-		2E9B2F7E1E8D0838008D5EE6 /* h06.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B2F761E8D0838008D5EE6 /* h06.png */; };
-		2E9B2F7F1E8D0838008D5EE6 /* h07.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B2F771E8D0838008D5EE6 /* h07.png */; };
-		2E9B2F801E8D0838008D5EE6 /* hua.flajson in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B2F781E8D0838008D5EE6 /* hua.flajson */; };
+		2EC5E6E11E8E32EC00B58CD6 /* FlashViewDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5E6D61E8E32EC00B58CD6 /* FlashViewDataReader.m */; };
+		2EC5E6E21E8E32EC00B58CD6 /* FlashViewDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5E6D81E8E32EC00B58CD6 /* FlashViewDownloader.m */; };
+		2EC5E6E31E8E32EC00B58CD6 /* FlashViewNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5E6DA1E8E32EC00B58CD6 /* FlashViewNew.m */; };
+		2EC5E6E41E8E32EC00B58CD6 /* FlashViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5E6DC1E8E32EC00B58CD6 /* FlashViewNode.m */; };
+		2EC5E6E51E8E32EC00B58CD6 /* FlashViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5E6DE1E8E32EC00B58CD6 /* FlashViewTool.m */; };
+		2EC5E6E61E8E32EC00B58CD6 /* XWFlashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5E6E01E8E32EC00B58CD6 /* XWFlashManager.m */; };
+		2EC5E6F01E8E47E100B58CD6 /* h01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5E6E81E8E47E100B58CD6 /* h01.png */; };
+		2EC5E6F11E8E47E100B58CD6 /* h02.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5E6E91E8E47E100B58CD6 /* h02.png */; };
+		2EC5E6F21E8E47E100B58CD6 /* h03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5E6EA1E8E47E100B58CD6 /* h03.png */; };
+		2EC5E6F31E8E47E100B58CD6 /* h04.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5E6EB1E8E47E100B58CD6 /* h04.png */; };
+		2EC5E6F41E8E47E100B58CD6 /* h05.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5E6EC1E8E47E100B58CD6 /* h05.png */; };
+		2EC5E6F51E8E47E100B58CD6 /* h06.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5E6ED1E8E47E100B58CD6 /* h06.png */; };
+		2EC5E6F61E8E47E100B58CD6 /* h07.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5E6EE1E8E47E100B58CD6 /* h07.png */; };
+		2EC5E6F71E8E47E100B58CD6 /* hua1.flajson in Resources */ = {isa = PBXBuildFile; fileRef = 2EC5E6EF1E8E47E100B58CD6 /* hua1.flajson */; };
 		2ECBFD3F1E8A62340095C128 /* laba_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECBFD351E8A62340095C128 /* laba_1.png */; };
 		2ECBFD401E8A62340095C128 /* laba_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECBFD361E8A62340095C128 /* laba_2.png */; };
 		2ECBFD411E8A62340095C128 /* laba_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ECBFD371E8A62340095C128 /* laba_3.png */; };
@@ -44,11 +50,6 @@
 		2EE4B9D11E839196000AB67A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4B9CF1E839196000AB67A /* Main.storyboard */; };
 		2EE4B9D31E839196000AB67A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4B9D21E839196000AB67A /* Assets.xcassets */; };
 		2EE4B9D61E839196000AB67A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4B9D41E839196000AB67A /* LaunchScreen.storyboard */; };
-		2EE4BA151E839218000AB67A /* FlashViewDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4B9E11E839218000AB67A /* FlashViewDataReader.m */; };
-		2EE4BA161E839218000AB67A /* FlashViewDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4B9E31E839218000AB67A /* FlashViewDownloader.m */; };
-		2EE4BA171E839218000AB67A /* FlashViewNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4B9E51E839218000AB67A /* FlashViewNew.m */; };
-		2EE4BA181E839218000AB67A /* FlashViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4B9E71E839218000AB67A /* FlashViewNode.m */; };
-		2EE4BA191E839218000AB67A /* FlashViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4B9E91E839218000AB67A /* FlashViewTool.m */; };
 		2EE4BA1A1E839218000AB67A /* bieshu_40001.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4B9ED1E839218000AB67A /* bieshu_40001.png */; };
 		2EE4BA1B1E839218000AB67A /* bieshu_400012.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4B9EE1E839218000AB67A /* bieshu_400012.png */; };
 		2EE4BA1C1E839218000AB67A /* bieshu_400013.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4B9EF1E839218000AB67A /* bieshu_400013.png */; };
@@ -58,7 +59,6 @@
 		2EE4BA2A1E839218000AB67A /* mutiFlowerDrop.flajson in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4B9FF1E839218000AB67A /* mutiFlowerDrop.flajson */; };
 		2EE4BA2B1E839218000AB67A /* mutiFlowerRandom_9999_9999.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4BA011E839218000AB67A /* mutiFlowerRandom_9999_9999.png */; };
 		2EE4BA2C1E839218000AB67A /* mutiFlowerRandom.flajson in Resources */ = {isa = PBXBuildFile; fileRef = 2EE4BA021E839218000AB67A /* mutiFlowerRandom.flajson */; };
-		2EE4BA2F1E839218000AB67A /* XWFlashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4BA071E839218000AB67A /* XWFlashManager.m */; };
 		2EE4BA301E839218000AB67A /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4BA0B1E839218000AB67A /* ioapi.c */; };
 		2EE4BA311E839218000AB67A /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4BA0D1E839218000AB67A /* mztools.c */; };
 		2EE4BA321E839218000AB67A /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2EE4BA0F1E839218000AB67A /* unzip.c */; };
@@ -75,14 +75,27 @@
 		2E6EACD71E83B23D00220589 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2E6EACD81E83B23D00220589 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2E6EACD91E83B23D00220589 /* XWHUDImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XWHUDImages.bundle; sourceTree = "<group>"; };
-		2E9B2F711E8D0838008D5EE6 /* h01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h01.png; sourceTree = "<group>"; };
-		2E9B2F721E8D0838008D5EE6 /* h02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h02.png; sourceTree = "<group>"; };
-		2E9B2F731E8D0838008D5EE6 /* h03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h03.png; sourceTree = "<group>"; };
-		2E9B2F741E8D0838008D5EE6 /* h04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h04.png; sourceTree = "<group>"; };
-		2E9B2F751E8D0838008D5EE6 /* h05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h05.png; sourceTree = "<group>"; };
-		2E9B2F761E8D0838008D5EE6 /* h06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h06.png; sourceTree = "<group>"; };
-		2E9B2F771E8D0838008D5EE6 /* h07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h07.png; sourceTree = "<group>"; };
-		2E9B2F781E8D0838008D5EE6 /* hua.flajson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hua.flajson; sourceTree = "<group>"; };
+		2EC5E6D41E8E32EC00B58CD6 /* FlashViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewCommon.h; sourceTree = "<group>"; };
+		2EC5E6D51E8E32EC00B58CD6 /* FlashViewDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewDataReader.h; sourceTree = "<group>"; };
+		2EC5E6D61E8E32EC00B58CD6 /* FlashViewDataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewDataReader.m; sourceTree = "<group>"; };
+		2EC5E6D71E8E32EC00B58CD6 /* FlashViewDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewDownloader.h; sourceTree = "<group>"; };
+		2EC5E6D81E8E32EC00B58CD6 /* FlashViewDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewDownloader.m; sourceTree = "<group>"; };
+		2EC5E6D91E8E32EC00B58CD6 /* FlashViewNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewNew.h; sourceTree = "<group>"; };
+		2EC5E6DA1E8E32EC00B58CD6 /* FlashViewNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewNew.m; sourceTree = "<group>"; };
+		2EC5E6DB1E8E32EC00B58CD6 /* FlashViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewNode.h; sourceTree = "<group>"; };
+		2EC5E6DC1E8E32EC00B58CD6 /* FlashViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewNode.m; sourceTree = "<group>"; };
+		2EC5E6DD1E8E32EC00B58CD6 /* FlashViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewTool.h; sourceTree = "<group>"; };
+		2EC5E6DE1E8E32EC00B58CD6 /* FlashViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewTool.m; sourceTree = "<group>"; };
+		2EC5E6DF1E8E32EC00B58CD6 /* XWFlashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWFlashManager.h; sourceTree = "<group>"; };
+		2EC5E6E01E8E32EC00B58CD6 /* XWFlashManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWFlashManager.m; sourceTree = "<group>"; };
+		2EC5E6E81E8E47E100B58CD6 /* h01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h01.png; sourceTree = "<group>"; };
+		2EC5E6E91E8E47E100B58CD6 /* h02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h02.png; sourceTree = "<group>"; };
+		2EC5E6EA1E8E47E100B58CD6 /* h03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h03.png; sourceTree = "<group>"; };
+		2EC5E6EB1E8E47E100B58CD6 /* h04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h04.png; sourceTree = "<group>"; };
+		2EC5E6EC1E8E47E100B58CD6 /* h05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h05.png; sourceTree = "<group>"; };
+		2EC5E6ED1E8E47E100B58CD6 /* h06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h06.png; sourceTree = "<group>"; };
+		2EC5E6EE1E8E47E100B58CD6 /* h07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h07.png; sourceTree = "<group>"; };
+		2EC5E6EF1E8E47E100B58CD6 /* hua1.flajson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hua1.flajson; sourceTree = "<group>"; };
 		2ECBFD351E8A62340095C128 /* laba_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laba_1.png; sourceTree = "<group>"; };
 		2ECBFD361E8A62340095C128 /* laba_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laba_2.png; sourceTree = "<group>"; };
 		2ECBFD371E8A62340095C128 /* laba_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laba_3.png; sourceTree = "<group>"; };
@@ -111,17 +124,6 @@
 		2EE4B9D21E839196000AB67A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EE4B9D51E839196000AB67A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EE4B9D71E839196000AB67A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EE4B9DF1E839218000AB67A /* FlashViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewCommon.h; sourceTree = "<group>"; };
-		2EE4B9E01E839218000AB67A /* FlashViewDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewDataReader.h; sourceTree = "<group>"; };
-		2EE4B9E11E839218000AB67A /* FlashViewDataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewDataReader.m; sourceTree = "<group>"; };
-		2EE4B9E21E839218000AB67A /* FlashViewDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewDownloader.h; sourceTree = "<group>"; };
-		2EE4B9E31E839218000AB67A /* FlashViewDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewDownloader.m; sourceTree = "<group>"; };
-		2EE4B9E41E839218000AB67A /* FlashViewNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewNew.h; sourceTree = "<group>"; };
-		2EE4B9E51E839218000AB67A /* FlashViewNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewNew.m; sourceTree = "<group>"; };
-		2EE4B9E61E839218000AB67A /* FlashViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewNode.h; sourceTree = "<group>"; };
-		2EE4B9E71E839218000AB67A /* FlashViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewNode.m; sourceTree = "<group>"; };
-		2EE4B9E81E839218000AB67A /* FlashViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashViewTool.h; sourceTree = "<group>"; };
-		2EE4B9E91E839218000AB67A /* FlashViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashViewTool.m; sourceTree = "<group>"; };
 		2EE4B9ED1E839218000AB67A /* bieshu_40001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bieshu_40001.png; sourceTree = "<group>"; };
 		2EE4B9EE1E839218000AB67A /* bieshu_400012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bieshu_400012.png; sourceTree = "<group>"; };
 		2EE4B9EF1E839218000AB67A /* bieshu_400013.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bieshu_400013.png; sourceTree = "<group>"; };
@@ -131,8 +133,6 @@
 		2EE4B9FF1E839218000AB67A /* mutiFlowerDrop.flajson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mutiFlowerDrop.flajson; sourceTree = "<group>"; };
 		2EE4BA011E839218000AB67A /* mutiFlowerRandom_9999_9999.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mutiFlowerRandom_9999_9999.png; sourceTree = "<group>"; };
 		2EE4BA021E839218000AB67A /* mutiFlowerRandom.flajson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mutiFlowerRandom.flajson; sourceTree = "<group>"; };
-		2EE4BA061E839218000AB67A /* XWFlashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWFlashManager.h; sourceTree = "<group>"; };
-		2EE4BA071E839218000AB67A /* XWFlashManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWFlashManager.m; sourceTree = "<group>"; };
 		2EE4BA0A1E839218000AB67A /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		2EE4BA0B1E839218000AB67A /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		2EE4BA0C1E839218000AB67A /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -179,25 +179,43 @@
 			path = XWHUDManager;
 			sourceTree = "<group>";
 		};
-		2E9B2F701E8D0838008D5EE6 /* hua */ = {
+		2EC5E6D31E8E32EC00B58CD6 /* FlashView */ = {
 			isa = PBXGroup;
 			children = (
-				2E9B2F711E8D0838008D5EE6 /* h01.png */,
-				2E9B2F721E8D0838008D5EE6 /* h02.png */,
-				2E9B2F731E8D0838008D5EE6 /* h03.png */,
-				2E9B2F741E8D0838008D5EE6 /* h04.png */,
-				2E9B2F751E8D0838008D5EE6 /* h05.png */,
-				2E9B2F761E8D0838008D5EE6 /* h06.png */,
-				2E9B2F771E8D0838008D5EE6 /* h07.png */,
+				2EC5E6D41E8E32EC00B58CD6 /* FlashViewCommon.h */,
+				2EC5E6D51E8E32EC00B58CD6 /* FlashViewDataReader.h */,
+				2EC5E6D61E8E32EC00B58CD6 /* FlashViewDataReader.m */,
+				2EC5E6D71E8E32EC00B58CD6 /* FlashViewDownloader.h */,
+				2EC5E6D81E8E32EC00B58CD6 /* FlashViewDownloader.m */,
+				2EC5E6D91E8E32EC00B58CD6 /* FlashViewNew.h */,
+				2EC5E6DA1E8E32EC00B58CD6 /* FlashViewNew.m */,
+				2EC5E6DB1E8E32EC00B58CD6 /* FlashViewNode.h */,
+				2EC5E6DC1E8E32EC00B58CD6 /* FlashViewNode.m */,
+				2EC5E6DD1E8E32EC00B58CD6 /* FlashViewTool.h */,
+				2EC5E6DE1E8E32EC00B58CD6 /* FlashViewTool.m */,
 			);
-			path = hua;
+			path = FlashView;
+			sourceTree = "<group>";
+		};
+		2EC5E6E71E8E47E100B58CD6 /* hua1 */ = {
+			isa = PBXGroup;
+			children = (
+				2EC5E6E81E8E47E100B58CD6 /* h01.png */,
+				2EC5E6E91E8E47E100B58CD6 /* h02.png */,
+				2EC5E6EA1E8E47E100B58CD6 /* h03.png */,
+				2EC5E6EB1E8E47E100B58CD6 /* h04.png */,
+				2EC5E6EC1E8E47E100B58CD6 /* h05.png */,
+				2EC5E6ED1E8E47E100B58CD6 /* h06.png */,
+				2EC5E6EE1E8E47E100B58CD6 /* h07.png */,
+			);
+			path = hua1;
 			sourceTree = "<group>";
 		};
 		2ECBFD2A1E8A5B9D0095C128 /* ZeTest */ = {
 			isa = PBXGroup;
 			children = (
-				2E9B2F701E8D0838008D5EE6 /* hua */,
-				2E9B2F781E8D0838008D5EE6 /* hua.flajson */,
+				2EC5E6E71E8E47E100B58CD6 /* hua1 */,
+				2EC5E6EF1E8E47E100B58CD6 /* hua1.flajson */,
 				2ECBFD4C1E8B481F0095C128 /* luo */,
 				2ECBFD541E8B481F0095C128 /* luo.flajson */,
 				2ECBFD341E8A62340095C128 /* ba */,
@@ -282,32 +300,14 @@
 		2EE4B9DD1E839218000AB67A /* XWFlashAnimClass */ = {
 			isa = PBXGroup;
 			children = (
+				2EC5E6D31E8E32EC00B58CD6 /* FlashView */,
+				2EC5E6DF1E8E32EC00B58CD6 /* XWFlashManager.h */,
+				2EC5E6E01E8E32EC00B58CD6 /* XWFlashManager.m */,
 				2ECBFD2A1E8A5B9D0095C128 /* ZeTest */,
-				2EE4B9DE1E839218000AB67A /* FlashView */,
 				2EE4B9EA1E839218000AB67A /* Resources */,
-				2EE4BA061E839218000AB67A /* XWFlashManager.h */,
-				2EE4BA071E839218000AB67A /* XWFlashManager.m */,
 				2EE4BA081E839218000AB67A /* Zip */,
 			);
 			path = XWFlashAnimClass;
-			sourceTree = "<group>";
-		};
-		2EE4B9DE1E839218000AB67A /* FlashView */ = {
-			isa = PBXGroup;
-			children = (
-				2EE4B9DF1E839218000AB67A /* FlashViewCommon.h */,
-				2EE4B9E01E839218000AB67A /* FlashViewDataReader.h */,
-				2EE4B9E11E839218000AB67A /* FlashViewDataReader.m */,
-				2EE4B9E21E839218000AB67A /* FlashViewDownloader.h */,
-				2EE4B9E31E839218000AB67A /* FlashViewDownloader.m */,
-				2EE4B9E41E839218000AB67A /* FlashViewNew.h */,
-				2EE4B9E51E839218000AB67A /* FlashViewNew.m */,
-				2EE4B9E61E839218000AB67A /* FlashViewNode.h */,
-				2EE4B9E71E839218000AB67A /* FlashViewNode.m */,
-				2EE4B9E81E839218000AB67A /* FlashViewTool.h */,
-				2EE4B9E91E839218000AB67A /* FlashViewTool.m */,
-			);
-			path = FlashView;
 			sourceTree = "<group>";
 		};
 		2EE4B9EA1E839218000AB67A /* Resources */ = {
@@ -453,45 +453,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9B2F7E1E8D0838008D5EE6 /* h06.png in Resources */,
+				2EC5E6F11E8E47E100B58CD6 /* h02.png in Resources */,
+				2EC5E6F41E8E47E100B58CD6 /* h05.png in Resources */,
 				2EE4B9D61E839196000AB67A /* LaunchScreen.storyboard in Resources */,
 				2EE4BA1E1E839218000AB67A /* bieshu.flajson in Resources */,
+				2EC5E6F01E8E47E100B58CD6 /* h01.png in Resources */,
 				2E545CD11E88A588009F30A4 /* testFlash.flajson in Resources */,
 				2ECBFD581E8B481F0095C128 /* yezi1.png in Resources */,
 				2ECBFD571E8B481F0095C128 /* jing.png in Resources */,
+				2EC5E6F61E8E47E100B58CD6 /* h07.png in Resources */,
 				2EE4BA2A1E839218000AB67A /* mutiFlowerDrop.flajson in Resources */,
 				2EE4BA2B1E839218000AB67A /* mutiFlowerRandom_9999_9999.png in Resources */,
 				2ECBFD471E8A62340095C128 /* laba_lan3.png in Resources */,
-				2E9B2F7F1E8D0838008D5EE6 /* h07.png in Resources */,
 				2ECBFD5A1E8B481F0095C128 /* yezi3.png in Resources */,
-				2E9B2F7A1E8D0838008D5EE6 /* h02.png in Resources */,
+				2EC5E6F21E8E47E100B58CD6 /* h03.png in Resources */,
 				2ECBFD411E8A62340095C128 /* laba_3.png in Resources */,
 				2EE4BA1B1E839218000AB67A /* bieshu_400012.png in Resources */,
 				2ECBFD5C1E8B481F0095C128 /* luo.flajson in Resources */,
-				2E9B2F801E8D0838008D5EE6 /* hua.flajson in Resources */,
 				2ECBFD481E8A62340095C128 /* ba.flajson in Resources */,
-				2E9B2F7C1E8D0838008D5EE6 /* h04.png in Resources */,
 				2E545CD01E88A588009F30A4 /* xf_0.png in Resources */,
 				2ECBFD461E8A62340095C128 /* laba_lan2.png in Resources */,
 				2ECBFD551E8B481F0095C128 /* huabao.png in Resources */,
 				2EE4BA2C1E839218000AB67A /* mutiFlowerRandom.flajson in Resources */,
 				2ECBFD591E8B481F0095C128 /* yezi2.png in Resources */,
 				2ECBFD5B1E8B481F0095C128 /* yezi4.png in Resources */,
-				2E9B2F791E8D0838008D5EE6 /* h01.png in Resources */,
-				2E9B2F7B1E8D0838008D5EE6 /* h03.png in Resources */,
 				2ECBFD431E8A62340095C128 /* laba_bai2.png in Resources */,
 				2ECBFD421E8A62340095C128 /* laba_bai1.png in Resources */,
 				2EE4BA291E839218000AB67A /* mutiFlowerDrop_9999_9999.png in Resources */,
+				2EC5E6F71E8E47E100B58CD6 /* hua1.flajson in Resources */,
 				2ECBFD401E8A62340095C128 /* laba_2.png in Resources */,
 				2EE4B9D31E839196000AB67A /* Assets.xcassets in Resources */,
 				2EE4BA1D1E839218000AB67A /* bieshu_xinxin.png in Resources */,
-				2E9B2F7D1E8D0838008D5EE6 /* h05.png in Resources */,
 				2EE4BA1C1E839218000AB67A /* bieshu_400013.png in Resources */,
 				2EE4B9D11E839196000AB67A /* Main.storyboard in Resources */,
 				2ECBFD3F1E8A62340095C128 /* laba_1.png in Resources */,
+				2EC5E6F51E8E47E100B58CD6 /* h06.png in Resources */,
 				2E6EACDC1E83B23D00220589 /* XWHUDImages.bundle in Resources */,
 				2ECBFD451E8A62340095C128 /* laba_lan1.png in Resources */,
 				2ECBFD561E8B481F0095C128 /* huaduo.png in Resources */,
+				2EC5E6F31E8E47E100B58CD6 /* h04.png in Resources */,
 				2ECBFD441E8A62340095C128 /* laba_bai3.png in Resources */,
 				2EE4BA1A1E839218000AB67A /* bieshu_40001.png in Resources */,
 			);
@@ -504,22 +504,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC5E6E21E8E32EC00B58CD6 /* FlashViewDownloader.m in Sources */,
 				2EE4B9CE1E839196000AB67A /* ViewController.m in Sources */,
 				2E6EACDA1E83B23D00220589 /* MBProgressHUD+XW.m in Sources */,
-				2EE4BA191E839218000AB67A /* FlashViewTool.m in Sources */,
+				2EC5E6E61E8E32EC00B58CD6 /* XWFlashManager.m in Sources */,
 				2EE4B9CB1E839196000AB67A /* AppDelegate.m in Sources */,
-				2EE4BA171E839218000AB67A /* FlashViewNew.m in Sources */,
 				2EE4BA301E839218000AB67A /* ioapi.c in Sources */,
 				2EE4BA311E839218000AB67A /* mztools.c in Sources */,
 				2EE4BA321E839218000AB67A /* unzip.c in Sources */,
-				2EE4BA151E839218000AB67A /* FlashViewDataReader.m in Sources */,
 				2EE4B9C81E839196000AB67A /* main.m in Sources */,
-				2EE4BA161E839218000AB67A /* FlashViewDownloader.m in Sources */,
+				2EC5E6E31E8E32EC00B58CD6 /* FlashViewNew.m in Sources */,
+				2EC5E6E51E8E32EC00B58CD6 /* FlashViewTool.m in Sources */,
 				2EE4BA341E839218000AB67A /* ZipArchive.m in Sources */,
 				2EE4BA331E839218000AB67A /* zip.c in Sources */,
-				2EE4BA181E839218000AB67A /* FlashViewNode.m in Sources */,
-				2EE4BA2F1E839218000AB67A /* XWFlashManager.m in Sources */,
 				2E6EACDB1E83B23D00220589 /* MBProgressHUD.m in Sources */,
+				2EC5E6E11E8E32EC00B58CD6 /* FlashViewDataReader.m in Sources */,
+				2EC5E6E41E8E32EC00B58CD6 /* FlashViewNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
