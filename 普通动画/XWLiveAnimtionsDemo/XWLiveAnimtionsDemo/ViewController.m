@@ -84,7 +84,7 @@
         manager.parentView = self.view;
         // model 传入礼物模型
         [manager animWithGiftModel:_giftModel finishedBlock:^(BOOL result) {
-            NSLog(@"普通动画结束!");
+            NSLog(@"普通动画结束++!");
         }];
     }
 }
@@ -92,13 +92,14 @@
     
     long  x = arc4random() % 9+10;
     XWGiftModel *giftModel = [[XWGiftModel alloc] init];
-    giftModel.giftId = 1;
+    giftModel.giftId = 2;
     giftModel.headImage = [UIImage imageNamed:@"luffy"];
     giftModel.giftType = GIFT_TYPE_COOFFEE;
     giftModel.giftPic  = @"https:// xxx";
     giftModel.giftImage = [UIImage imageNamed:@"ic_soap_small_14th"];
     giftModel.giftName = @"咖啡";
-    giftModel.giftCount = 9999;
+    giftModel.giftCount = 1;
+    _giftModel = giftModel;
     
     XWUserInfo *user = [[XWUserInfo alloc] init];
     user.userName = [NSString stringWithFormat:@"用户 %ld",x];
@@ -110,10 +111,21 @@
         manager.parentView = self.view;
         // model 传入礼物模型
         [manager animWithGiftModel:giftModel finishedBlock:^(BOOL result) {
-            
+            NSLog(@"咖啡动画结束");
         }];
     }
 
+}
+
+- (IBAction)coffeeGiftX2:(UIButton *)sender {
+    _giftModel.giftCount ++;
+    if (manager) {
+        manager.parentView = self.view;
+        
+        [manager animWithGiftModel:_giftModel finishedBlock:^(BOOL result) {
+            NSLog(@"咖啡动画结束++");
+        }];
+    }
 }
 
 @end

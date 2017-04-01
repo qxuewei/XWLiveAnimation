@@ -11,7 +11,7 @@
 #import "XWPresentView.h"
 #import "XWGiftModel.h"
 
-//#import "XWRightAnimView.h"
+#import "XWRightAnimView.h"
 //#import "XWOceanAnimView.h"
 //#import "XWCastleAnimView.h"
 //#import "XWMarkAnimView.h"

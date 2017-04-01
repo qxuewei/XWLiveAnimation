@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4A8CA31E8F46D1002BFA13 /* UIView+XWAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A8CA21E8F46D1002BFA13 /* UIView+XWAnimate.m */; };
 		2ECBFCF21E8A11890095C128 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFCF11E8A11890095C128 /* main.m */; };
 		2ECBFCF51E8A11890095C128 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFCF41E8A11890095C128 /* AppDelegate.m */; };
 		2ECBFCF81E8A11890095C128 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFCF71E8A11890095C128 /* ViewController.m */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E4A8CA11E8F46D1002BFA13 /* UIView+XWAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XWAnimate.h"; sourceTree = "<group>"; };
+		2E4A8CA21E8F46D1002BFA13 /* UIView+XWAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XWAnimate.m"; sourceTree = "<group>"; };
 		2ECBFCED1E8A11890095C128 /* XWLiveAnimtionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWLiveAnimtionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECBFCF11E8A11890095C128 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ECBFCF31E8A11890095C128 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,13 +140,15 @@
 		2ECBFD091E8A27E00095C128 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2ECBFD201E8A34E00095C128 /* XWLiveGiftAnimationHeader.h */,
 				2ECBFD141E8A2D9E0095C128 /* XWAnimationImageCache.h */,
 				2ECBFD151E8A2D9E0095C128 /* XWAnimationImageCache.m */,
 				2ECBFD241E8A394A0095C128 /* XWAnimOperation.h */,
 				2ECBFD251E8A394A0095C128 /* XWAnimOperation.m */,
 				2ECBFD1D1E8A33410095C128 /* UIColor+XWColor.h */,
 				2ECBFD1E1E8A33410095C128 /* UIColor+XWColor.m */,
-				2ECBFD201E8A34E00095C128 /* XWLiveGiftAnimationHeader.h */,
+				2E4A8CA11E8F46D1002BFA13 /* UIView+XWAnimate.h */,
+				2E4A8CA21E8F46D1002BFA13 /* UIView+XWAnimate.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				2ECBFCF51E8A11890095C128 /* AppDelegate.m in Sources */,
 				2ECBFD131E8A2A700095C128 /* XWAnimOperationManager.m in Sources */,
 				2ECBFD4B1E8B47940095C128 /* XWRightAnimView.m in Sources */,
+				2E4A8CA31E8F46D1002BFA13 /* UIView+XWAnimate.m in Sources */,
 				2ECBFD1F1E8A33410095C128 /* UIColor+XWColor.m in Sources */,
 				2ECBFD291E8A39960095C128 /* XWPresentView.m in Sources */,
 				2ECBFD1C1E8A2F620095C128 /* XWShakeLabel.m in Sources */,
@@ -404,6 +410,7 @@
 				2ECBFD061E8A11890095C128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

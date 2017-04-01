@@ -22,7 +22,7 @@
 - (IBAction)showLocalFlashAnim:(UIButton *)sender {
     NSString *flashName = [[self flashArr] objectAtIndex:arc4random_uniform(5)];
     NSLog(@"flashName: %@",flashName);
-    [[XWFlashManager shareInstance] playFlashAnimationWithName:@"hua1" endBlock:^{
+    [[XWFlashManager shareInstance] playFlashAnimationWithName:@"tanghulu" endBlock:^{
         
     }];
 }

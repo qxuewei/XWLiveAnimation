@@ -242,7 +242,7 @@
     NSString *userReuseIdentifierID = [self getUserReuseIdentifierID:model];
     
     // 在有用户礼物信息时
-    if ([self.userGiftInfos objectForKey:userReuseIdentifierID]) {
+    if ([[self.userGiftInfos objectForKey:userReuseIdentifierID] integerValue] > 0) {
         // 如果有操作缓存，则直接累加，不需要重新创建op
         if ([self.operationCache objectForKey:userReuseIdentifierID]!=nil) {
             XWAnimOperation *op = [self.operationCache objectForKey:userReuseIdentifierID];

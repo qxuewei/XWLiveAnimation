@@ -32,8 +32,8 @@
 //        op.markAnimView  = [[XWMarkAnimView alloc] init];
 //    }else if (model.giftType == GIFT_TYPE_OCEAN) { //海洋之星
 //        op.oceanAnimView = [[XWOceanAnimView alloc]init];
-//    }else if (model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
-//        op.rightAnimView = [[XWRightAnimView alloc] init];
+    }else if (model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
+        op.rightAnimView = [[XWRightAnimView alloc] init];
 //    }else if (model.giftType == GIFT_TYPE_CASTLE) { //女皇的城堡
 //        op.castleAnimView = [[XWCastleAnimView alloc] init];
     }
@@ -68,8 +68,8 @@
 //        [self addOperationWithMarkAnimView];
 //    }else if (_model.giftType == GIFT_TYPE_OCEAN) {  //海洋之星
 //        [self addOperationWithOceanAnimView];
-//    }else if (_model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
-//        [self addOperationWithPightAnimView];
+    }else if (_model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
+        [self addOperationWithPightAnimView];
 //    }else if (_model.giftType == GIFT_TYPE_CASTLE) {  //女皇的城堡
 //        [self addOperationWithCastleAnimView];
     }
@@ -91,21 +91,21 @@
     
 }
 
-//// 右边动画添加到队列
-//-(void) addOperationWithPightAnimView{
-//    
-//    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//        _rightAnimView.model = _model;
-//        _rightAnimView.originFrame = _rightAnimView.frame;
-//        [self.rightAnimlistView addSubview:_rightAnimView];
-//        
-//        [self.rightAnimView animateWithCompleteBlock:^(BOOL finished,NSInteger finishCount) {
-//            self.finished = finished;
-//            self.finishedBlock(finished,finishCount);
-//        }];
-//    }];
-//}
-//
+// 右边动画添加到队列
+-(void) addOperationWithPightAnimView{
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        _rightAnimView.model = _model;
+        _rightAnimView.originFrame = _rightAnimView.frame;
+        [self.rightAnimlistView addSubview:_rightAnimView];
+        
+        [self.rightAnimView animateWithCompleteBlock:^(BOOL finished,NSInteger finishCount) {
+            self.finished = finished;
+            self.finishedBlock(finished,finishCount);
+        }];
+    }];
+}
+
 //// 海洋之星动画添加到队列
 //-(void)addOperationWithOceanAnimView{
 //    

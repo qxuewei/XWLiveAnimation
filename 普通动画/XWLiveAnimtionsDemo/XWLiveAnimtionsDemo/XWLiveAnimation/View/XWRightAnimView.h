@@ -8,9 +8,6 @@
 
 #import "XWBaseAnimView.h"
 
-
-
-
 @interface XWRightAnimView : XWBaseAnimView
 
 @end

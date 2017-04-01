@@ -19,7 +19,7 @@
 #import "XWAnimOperation.h"
 #import "XWShakeLabel.h"
 #import "XWAnimOperationManager.h"
-//#import "UIView+animate.h"
+#import "UIView+XWAnimate.h"
 #import "XWAnimationImageCache.h"
 
 #import "XWBaseAnimView.h"
