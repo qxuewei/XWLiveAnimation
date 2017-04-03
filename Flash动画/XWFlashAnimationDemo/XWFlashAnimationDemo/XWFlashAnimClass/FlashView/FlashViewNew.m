@@ -98,7 +98,7 @@
     self = [super init];
     if (self) {
         self.animPosMask = FlashViewAnimPosMaskVerCenter | FlashViewAnimPosMaskHorCenter;
-        self.implicitAnimDurationScale = 1;
+        self.implicitAnimDurationScale = 2;
     }
     return self;
 }
@@ -126,11 +126,11 @@
         default:
             break;
     }
-    self.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
-//    self.frame = CGRectMake(0, 0, FLASH_VIEW_WIDTH, FLASH_VIEW_HEIGHT);
-//    self.backgroundColor = [UIColor lightGrayColor];
-//    CGPoint centerPoint = CGPointMake([UIScreen mainScreen].bounds.size.width * 0.5, [UIScreen mainScreen].bounds.size.height * 0.5);
-//    self.center = centerPoint;
+//    self.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
+    self.frame = CGRectMake(0, 0, FLASH_VIEW_WIDTH, FLASH_VIEW_HEIGHT);
+    self.backgroundColor = [UIColor lightGrayColor];
+    CGPoint centerPoint = CGPointMake([UIScreen mainScreen].bounds.size.width * 0.5, [UIScreen mainScreen].bounds.size.height * 0.5);
+    self.center = centerPoint;
     
     mFileManager = [NSFileManager defaultManager];
     mMainBundle = [NSBundle mainBundle];
@@ -242,11 +242,7 @@
     CGFloat hRate = screenSize.height / resolution.height;
     switch (mode) {
         case FlashViewScaleModeWidthFit:
-            if ([self isOrientationPortrait]) {
-                [self setScaleWithX:wRate y:wRate isDesignResolutionEffect:NO];
-            }else{
-                [self setScaleWithX:hRate y:hRate isDesignResolutionEffect:NO];
-            }
+            [self setScaleWithX:wRate y:wRate isDesignResolutionEffect:NO];
             break;
         case FlashViewScaleModeHeightFit:
             [self setScaleWithX:hRate y:hRate isDesignResolutionEffect:NO];
@@ -286,9 +282,6 @@
     }
     _animPosMask = animPosMask;
     
-    //计算偏移量
-    [self calculateFactAnimOffset];
-    
     if (self.isInitOk) {
         [mFlashViewNode updateTransform];
     }
@@ -299,9 +292,6 @@
         return;
     }
     _screenOrientation = screenOrientation;
-    
-    //计算偏移量
-    [self calculateFactAnimOffset];
     
     if (self.isInitOk) {
         [mFlashViewNode updateTransform];
@@ -322,63 +312,6 @@
 
 -(CGPoint)animOffset{
     return self.tool.animOffset;
-}
-
-//-(void)setFrame:(CGRect)frame{
-//    [super setFrame:frame];
-//    if (self.isInitOk) {
-//        [self calculateFactAnimOffset];
-//    }
-//}
-
-//根据 screenOrientation posMask 能够算出动画偏移量。
--(void) calculateFactAnimOffset{
-    //屏幕方向变化了
-    if (self.designScreenOrientation != FlashViewScreenOrientationNone && _screenOrientation != self.designScreenOrientation) {
-        CGFloat animOffX = 0;
-        CGFloat animOffY = 0;
-        switch (_screenOrientation) {
-                //横向变竖向
-            case FlashViewScreenOrientationVer:{
-                //计算posMask 横向
-                if (self.animPosMask & FlashViewAnimPosMaskHorCenter) {
-                    animOffX = -(FLASH_VIEW_SCREEN_SIZE_HOR.width / 2 - FLASH_VIEW_SCREEN_SIZE_VER.width / 2);
-                }else if(self.animPosMask & FlashViewAnimPosMaskRight){
-                    animOffX = -(FLASH_VIEW_SCREEN_SIZE_HOR.width - self.frame.size.width);
-                }
-                
-                //计算posMask 竖向
-                if (self.animPosMask & FlashViewAnimPosMaskVerCenter) {
-                    animOffY = -(FLASH_VIEW_SCREEN_SIZE_HOR.height / 2 - FLASH_VIEW_SCREEN_SIZE_VER.height / 2);
-                }else if(self.animPosMask & FlashViewAnimPosMaskBottom){
-                    animOffY = FLASH_VIEW_SCREEN_SIZE_VER.height - self.frame.size.height;
-                }
-            }
-                break;
-                //竖向变横向
-            case FlashViewScreenOrientationHor:{
-                //计算posMask 横向
-                if (self.animPosMask & FlashViewAnimPosMaskHorCenter) {
-                    animOffX = FLASH_VIEW_SCREEN_SIZE_HOR.width / 2 - FLASH_VIEW_SCREEN_SIZE_VER.width / 2;
-                }else if(self.animPosMask & FlashViewAnimPosMaskRight){
-                    animOffX = FLASH_VIEW_SCREEN_SIZE_HOR.width - self.frame.size.width;
-                }
-                
-                //计算posMask 竖向
-                if (self.animPosMask & FlashViewAnimPosMaskVerCenter) {
-                    animOffY = FLASH_VIEW_SCREEN_SIZE_HOR.height / 2 - FLASH_VIEW_SCREEN_SIZE_VER.height / 2;
-                }else if(self.animPosMask & FlashViewAnimPosMaskBottom){
-                    animOffY = -(FLASH_VIEW_SCREEN_SIZE_VER.height - self.frame.size.height);
-                }
-            }
-                break;
-            default:
-                break;
-        }
-        self.tool.animOffset = CGPointMake(animOffX, animOffY);
-    }else{
-        self.tool.animOffset = _animOffset;
-    }
 }
 
 //以二进制方式读取文件数据
@@ -859,7 +792,7 @@
     self.tool = nil;
     mFlashName = flashName;
     mFlashAnimDir = animDir;
-    [self calculateFactAnimOffset];
+    
     [self setScaleMode:scaleMode andDesignResolution:resolution];
     if (![self innerInit]) {
         return NO;

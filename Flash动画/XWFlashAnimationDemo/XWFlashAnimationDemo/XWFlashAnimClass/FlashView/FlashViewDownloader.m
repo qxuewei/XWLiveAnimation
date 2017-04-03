@@ -226,6 +226,7 @@
 
 -(NSString *)versionPath{
     NSString *versionDir = [FlashViewHelper createDirInDocument:FLASH_VIEW_DEFAULT_ZIP_NAME root:FlashViewHelper.documentPath fileManager:self.fileManager];
+    NSLog(@"++ versionPath:%@",[NSString stringWithFormat:@"%@/version", versionDir]);
     return [NSString stringWithFormat:@"%@/version", versionDir];
 }
 

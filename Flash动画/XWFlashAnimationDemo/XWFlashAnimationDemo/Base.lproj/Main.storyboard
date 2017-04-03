@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eKn-id-JJo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eKn-id-JJo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,23 +27,23 @@
                                     <constraint firstAttribute="height" constant="30" id="5Ae-JF-Wdz"/>
                                     <constraint firstAttribute="width" constant="112" id="kGM-pn-cyT"/>
                                 </constraints>
-                                <state key="normal" title="   展示本地动画  "/>
+                                <state key="normal" title="测试新flash动画"/>
                                 <connections>
                                     <action selector="showLocalFlashAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hd-Nl-bfe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RO2-3U-Ebf">
-                                <rect key="frame" x="108" y="182" width="158" height="30"/>
-                                <state key="normal" title="   加载网络动画并播放  "/>
+                                <rect key="frame" x="109" y="182" width="156" height="30"/>
+                                <state key="normal" title="随机播放本地flash动画"/>
                                 <connections>
-                                    <action selector="showNetworkFlashAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYr-yf-Mvs"/>
+                                    <action selector="playRandomFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oxb-jA-TzS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwY-y6-Dxi">
-                                <rect key="frame" x="123" y="256" width="128" height="30"/>
-                                <state key="normal" title="   加载动画并播放  "/>
+                                <rect key="frame" x="108" y="256" width="158" height="30"/>
+                                <state key="normal" title="   加载网络动画并播放  "/>
                                 <connections>
-                                    <action selector="showFlashAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLn-me-MrX"/>
+                                    <action selector="showNetworkFlashAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMj-GL-nf5"/>
                                 </connections>
                             </button>
                         </subviews>

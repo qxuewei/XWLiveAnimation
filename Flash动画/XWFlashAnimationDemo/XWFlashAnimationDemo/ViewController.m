@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "XWFlashManager.h"
+#import "FlashGiftModel.h"
 
 @interface ViewController ()
 
@@ -16,39 +17,43 @@
 @implementation ViewController
 
 - (NSArray *)flashArr {
-    return @[@"bieshu",@"laba",@"mutiFlowerDrop",@"mutiFlowerRandom",@"testFlash"];
+    return @[@"bieshu",@"laba",@"mutiFlowerDrop",@"mutiFlowerRandom",@"testFlash",@"heiniao"];
 }
 
 - (IBAction)showLocalFlashAnim:(UIButton *)sender {
-    NSString *flashName = [[self flashArr] objectAtIndex:arc4random_uniform(5)];
-    NSLog(@"flashName: %@",flashName);
-    [[XWFlashManager shareInstance] playFlashAnimationWithName:@"tanghulu" endBlock:^{
-        
+    FlashGiftModel *giftModel = [[FlashGiftModel alloc] init];
+    giftModel.animName = @"tanghulu";
+    [[XWFlashManager shareInstance] playFlashAnimation:giftModel endBlock:^{
+        NSLog(@"测试动画播放完毕");
     }];
 }
+
+/// 随机播放flash动画
+- (IBAction)playRandomFlash:(UIButton *)sender {
+    NSString *flashName = [[self flashArr] objectAtIndex:arc4random_uniform(5)];
+    FlashGiftModel *giftModel = [[FlashGiftModel alloc] init];
+    giftModel.animName = flashName;
+    if ([flashName isEqualToString:@"heiniao"]) {
+        giftModel.zipUrl = @"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zi";
+    }
+    [[XWFlashManager shareInstance] playFlashAnimation:giftModel endBlock:^{
+        NSLog(@"测试动画播放完毕");
+    }];
+}
+
+/// 加载网络动画并播放
 - (IBAction)showNetworkFlashAnim:(UIButton *)sender {
-    [[XWFlashManager shareInstance] playNetWorkFlashAnimationWithURL:@"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zip"];
-}
-- (IBAction)showFlashAnim:(UIButton *)sender {
-    NSString *flashName = [[self flashArr] objectAtIndex:arc4random_uniform(5)];
-    NSLog(@"flashName: %@",flashName);
-    [[XWFlashManager shareInstance] playFlashAnimationWithName:flashName endBlock:^{
-        
+
+    FlashGiftModel *giftModel = [[FlashGiftModel alloc] init];
+    giftModel.animName = @"heiniao";
+    giftModel.version = @"1";
+    giftModel.zipUrl = @"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zip";
+    [[XWFlashManager shareInstance] playFlashAnimation:giftModel endBlock:^{
+        NSLog(@"测试动画播放完毕");
     }];
-
-//    [[XWFlashManager shareInstance] playNetWorkFlashAnimationWithURL:@"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zip"];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
