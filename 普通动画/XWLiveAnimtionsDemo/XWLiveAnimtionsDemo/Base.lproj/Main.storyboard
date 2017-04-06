@@ -55,18 +55,36 @@
                                             <action selector="coffeeGiftX2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wpy-lX-sd6"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSx-zh-Bdq">
+                                        <rect key="frame" x="278" y="8" width="31" height="30"/>
+                                        <state key="normal" title="爱心"/>
+                                        <connections>
+                                            <action selector="sendLover:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgm-pd-pbu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I38-uq-IDw">
+                                        <rect key="frame" x="317" y="8" width="31" height="30"/>
+                                        <state key="normal" title="面具"/>
+                                        <connections>
+                                            <action selector="sendMask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AS6-WL-D1c"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.13511344178082191" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="hSx-zh-Bdq" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="0Fb-ft-c5N"/>
                                     <constraint firstItem="9AH-fr-V4h" firstAttribute="leading" secondItem="pwZ-pW-5FY" secondAttribute="leading" constant="8" id="1rJ-be-n1v"/>
                                     <constraint firstItem="hQt-bT-rXp" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="6cG-aB-UHh"/>
                                     <constraint firstItem="lLG-fJ-uXl" firstAttribute="leading" secondItem="9AH-fr-V4h" secondAttribute="trailing" constant="8" id="Aua-AD-0hI"/>
+                                    <constraint firstItem="I38-uq-IDw" firstAttribute="leading" secondItem="hSx-zh-Bdq" secondAttribute="trailing" constant="8" id="BHe-eS-WXK"/>
                                     <constraint firstItem="lLG-fJ-uXl" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="Sy6-rU-pFT"/>
                                     <constraint firstItem="njl-OS-bWi" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="aFl-HP-Qgp"/>
                                     <constraint firstItem="9AH-fr-V4h" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="cNQ-kW-Mqo"/>
                                     <constraint firstItem="hQt-bT-rXp" firstAttribute="leading" secondItem="lLG-fJ-uXl" secondAttribute="trailing" constant="8" id="cnf-SZ-8bZ"/>
                                     <constraint firstAttribute="height" constant="128" id="dL3-2m-lLR"/>
                                     <constraint firstItem="njl-OS-bWi" firstAttribute="leading" secondItem="hQt-bT-rXp" secondAttribute="trailing" constant="8" id="dVA-XE-5bb"/>
+                                    <constraint firstItem="hSx-zh-Bdq" firstAttribute="leading" secondItem="njl-OS-bWi" secondAttribute="trailing" constant="8" id="g6m-Mo-H6P"/>
+                                    <constraint firstItem="I38-uq-IDw" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="rPE-B3-pP6"/>
                                 </constraints>
                             </view>
                         </subviews>

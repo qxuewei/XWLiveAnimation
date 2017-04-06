@@ -38,9 +38,6 @@
 		2E4A8D5C1E8F96C9002BFA13 /* XWFlashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A8D5B1E8F96C9002BFA13 /* XWFlashManager.m */; };
 		2E545CD01E88A588009F30A4 /* xf_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E545CCE1E88A588009F30A4 /* xf_0.png */; };
 		2E545CD11E88A588009F30A4 /* testFlash.flajson in Resources */ = {isa = PBXBuildFile; fileRef = 2E545CCF1E88A588009F30A4 /* testFlash.flajson */; };
-		2E6EACDA1E83B23D00220589 /* MBProgressHUD+XW.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6EACD61E83B23D00220589 /* MBProgressHUD+XW.m */; };
-		2E6EACDB1E83B23D00220589 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6EACD81E83B23D00220589 /* MBProgressHUD.m */; };
-		2E6EACDC1E83B23D00220589 /* XWHUDImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2E6EACD91E83B23D00220589 /* XWHUDImages.bundle */; };
 		2EA1D4A01E8FA6660095CB75 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA1D48C1E8FA6660095CB75 /* 01.png */; };
 		2EA1D4A11E8FA6660095CB75 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA1D48D1E8FA6660095CB75 /* 02.png */; };
 		2EA1D4A21E8FA6660095CB75 /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA1D48E1E8FA6660095CB75 /* 03.png */; };
@@ -124,11 +121,6 @@
 		2E4A8D5B1E8F96C9002BFA13 /* XWFlashManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWFlashManager.m; sourceTree = "<group>"; };
 		2E545CCE1E88A588009F30A4 /* xf_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xf_0.png; sourceTree = "<group>"; };
 		2E545CCF1E88A588009F30A4 /* testFlash.flajson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testFlash.flajson; sourceTree = "<group>"; };
-		2E6EACD51E83B23D00220589 /* MBProgressHUD+XW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XW.h"; sourceTree = "<group>"; };
-		2E6EACD61E83B23D00220589 /* MBProgressHUD+XW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XW.m"; sourceTree = "<group>"; };
-		2E6EACD71E83B23D00220589 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		2E6EACD81E83B23D00220589 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		2E6EACD91E83B23D00220589 /* XWHUDImages.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XWHUDImages.bundle; sourceTree = "<group>"; };
 		2EA1D48C1E8FA6660095CB75 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
 		2EA1D48D1E8FA6660095CB75 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		2EA1D48E1E8FA6660095CB75 /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
@@ -300,18 +292,6 @@
 			path = testFlash;
 			sourceTree = "<group>";
 		};
-		2E6EACD41E83B23D00220589 /* XWHUDManager */ = {
-			isa = PBXGroup;
-			children = (
-				2E6EACD51E83B23D00220589 /* MBProgressHUD+XW.h */,
-				2E6EACD61E83B23D00220589 /* MBProgressHUD+XW.m */,
-				2E6EACD71E83B23D00220589 /* MBProgressHUD.h */,
-				2E6EACD81E83B23D00220589 /* MBProgressHUD.m */,
-				2E6EACD91E83B23D00220589 /* XWHUDImages.bundle */,
-			);
-			path = XWHUDManager;
-			sourceTree = "<group>";
-		};
 		2EA1D48B1E8FA6660095CB75 /* tanghulu */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +356,6 @@
 		2EE4B9C51E839196000AB67A /* XWFlashAnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2E6EACD41E83B23D00220589 /* XWHUDManager */,
 				2EE4B9DD1E839218000AB67A /* XWFlashAnimClass */,
 				2EE4B9C91E839196000AB67A /* AppDelegate.h */,
 				2EE4B9CA1E839196000AB67A /* AppDelegate.m */,
@@ -611,7 +590,6 @@
 				2EE4BA1C1E839218000AB67A /* bieshu_400013.png in Resources */,
 				2EE4B9D11E839196000AB67A /* Main.storyboard in Resources */,
 				2E4A8D251E8F7D78002BFA13 /* laba_1.png in Resources */,
-				2E6EACDC1E83B23D00220589 /* XWHUDImages.bundle in Resources */,
 				2E4A8D2B1E8F7D78002BFA13 /* laba_lan1.png in Resources */,
 				2E4A8D2A1E8F7D78002BFA13 /* laba_bai3.png in Resources */,
 				2EE4BA1A1E839218000AB67A /* bieshu_40001.png in Resources */,
@@ -628,7 +606,6 @@
 			files = (
 				2EC5E6E21E8E32EC00B58CD6 /* FlashViewDownloader.m in Sources */,
 				2EE4B9CE1E839196000AB67A /* ViewController.m in Sources */,
-				2E6EACDA1E83B23D00220589 /* MBProgressHUD+XW.m in Sources */,
 				2E4A8D551E8F7DD9002BFA13 /* GiftModel.m in Sources */,
 				2EE4B9CB1E839196000AB67A /* AppDelegate.m in Sources */,
 				2E4A8D581E8F820A002BFA13 /* FlashGiftModel.m in Sources */,
@@ -640,7 +617,6 @@
 				2EC5E6E51E8E32EC00B58CD6 /* FlashViewTool.m in Sources */,
 				2EE4BA341E839218000AB67A /* ZipArchive.m in Sources */,
 				2EE4BA331E839218000AB67A /* zip.c in Sources */,
-				2E6EACDB1E83B23D00220589 /* MBProgressHUD.m in Sources */,
 				2EC5E6E11E8E32EC00B58CD6 /* FlashViewDataReader.m in Sources */,
 				2EC5E6E41E8E32EC00B58CD6 /* FlashViewNode.m in Sources */,
 				2E4A8D5C1E8F96C9002BFA13 /* XWFlashManager.m in Sources */,

@@ -34,7 +34,7 @@
     FlashGiftModel *giftModel = [[FlashGiftModel alloc] init];
     giftModel.animName = flashName;
     if ([flashName isEqualToString:@"heiniao"]) {
-        giftModel.zipUrl = @"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zi";
+        giftModel.zipUrl = @"https://github.com/hardman/OutLinkImages/raw/master/FlashAnimationToMobile/zips/heiniao.zip";
     }
     [[XWFlashManager shareInstance] playFlashAnimation:giftModel endBlock:^{
         NSLog(@"测试动画播放完毕");

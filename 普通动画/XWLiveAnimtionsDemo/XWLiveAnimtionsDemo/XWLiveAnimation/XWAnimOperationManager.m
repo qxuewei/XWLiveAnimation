@@ -67,18 +67,18 @@
             finishedBlock(result);
         }];
         
-//    }else if (model.giftType == GIFT_TYPE_GUARD) { //爱心守护者
-//        
-//        [self animWithGuard:model finishedBlock:^(BOOL result) {
-//            finishedBlock(result);
-//        }];
-//        
-//    }else if (model.giftType == GIFT_TYPE_MASK) {  //贵族面具
-//        
-//        [self animWithMask:model finishedBlock:^(BOOL result) {
-//            finishedBlock(result);
-//        }];
-//        
+    }else if (model.giftType == GIFT_TYPE_GUARD) { //爱心守护者
+        
+        [self animWithGuard:model finishedBlock:^(BOOL result) {
+            finishedBlock(result);
+        }];
+
+    }else if (model.giftType == GIFT_TYPE_MASK) {  //贵族面具
+        
+        [self animWithMask:model finishedBlock:^(BOOL result) {
+            finishedBlock(result);
+        }];
+//
 //    }else if (model.giftType == GIFT_TYPE_OCEAN) { //海洋之星
 //        
 //        [self animWithOcean:model finishedBlock:^(BOOL result) {
@@ -229,13 +229,6 @@
     }
 }
 
-//咖啡印记
--(void) animWithCooffee:(XWGiftModel *)model finishedBlock:(void (^)(BOOL))finishedBlock{
-    [self animWithRightAnimView:model finishedBlock:^(BOOL result) {
-        finishedBlock(result);
-    }];
-}
-
 /// 右边动画
 - (void)animWithRightAnimView:(XWGiftModel *)model finishedBlock:(void (^)(BOOL))finishedBlock{
     
@@ -325,6 +318,94 @@
     
     
 }
+
+//咖啡印记
+-(void) animWithCooffee:(XWGiftModel *)model finishedBlock:(void (^)(BOOL))finishedBlock{
+    [self animWithRightAnimView:model finishedBlock:^(BOOL result) {
+        finishedBlock(result);
+    }];
+}
+
+//爱心守护者
+-(void) animWithGuard:(XWGiftModel *)model finishedBlock:(void (^)(BOOL))finishedBlock{
+    [self animWithRightAnimView:model finishedBlock:^(BOOL result) {
+        finishedBlock(result);
+    }];
+}
+
+//贵族面具
+- (void)animWithMask:(XWGiftModel *)model finishedBlock:(void (^)(BOOL))finishedBlcok {
+    NSString *userReuseIdentifierID = [self getUserReuseIdentifierID:model];
+    //有用户礼物信息
+    if ([self.userGiftInfos objectForKey:userReuseIdentifierID]) {
+        // 有操作缓存直接累加
+        if ([self.operationCache objectForKey:userReuseIdentifierID]) {
+            XWAnimOperation *op = [self.operationCache objectForKey:userReuseIdentifierID];
+            op.markAnimView.giftCount = model.giftCount;
+            [op.markAnimView shakeNumberLabel];
+            return;
+        }
+        // 没有操作缓存
+        XWAnimOperation *op = [XWAnimOperation animOperationWithGiftModel:model finishedBlock:^(BOOL result, NSInteger finishCount) {
+            if (finishedBlcok) {
+                finishedBlcok(result);
+            }
+            // 礼物数量存起来
+            [self.userGiftInfos setObject:@(finishCount) forKey:userReuseIdentifierID];
+            // 动画完成后移除对应的操作
+            [self.operationCache removeObjectForKey:userReuseIdentifierID];
+            // 延时删除用户礼物信息
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.userGiftInfos removeObjectForKey:userReuseIdentifierID];
+            });
+        }];
+        op.markAnimView.animCount = [[self.userGiftInfos objectForKey:userReuseIdentifierID] integerValue];
+        op.model.giftCount = op.markAnimView.animCount + 1;
+        op.markAnimlistView = self.parentView;
+        op.index = GIFT_INDEX_markQueue;
+        [self.operationCache setObject:op forKey:userReuseIdentifierID];
+        if (op.model.giftCount != 0) {
+            op.markAnimView.frame = self.parentView.frame;
+            op.markAnimView.originFrame = op.markAnimView.frame;
+            [self.markQueue addOperation:op];
+        }
+    }
+    //没有用户礼物信息
+    else {
+        //有操作缓存
+        if ([self.operationCache objectForKey:userReuseIdentifierID]) {
+            XWAnimOperation *op = [self.operationCache objectForKey:userReuseIdentifierID];
+            op.markAnimView.giftCount = model.giftCount;
+            [op.markAnimView shakeNumberLabel];
+            return;
+        }
+        //没有操作缓存
+        XWAnimOperation *op = [XWAnimOperation animOperationWithGiftModel:model finishedBlock:^(BOOL result, NSInteger finishCount) {
+            if (finishedBlcok) {
+                finishedBlcok(result);
+            }
+            // 将礼物信息数量缓存起来
+            [self.userGiftInfos setObject:@(finishCount) forKey:userReuseIdentifierID];
+            // 动画完成之后, 要移除动画对应的操作
+            [self.operationCache removeObjectForKey:userReuseIdentifierID];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.userGiftInfos removeObjectForKey:userReuseIdentifierID];
+            });
+        }];
+        op.markAnimlistView = self.parentView;
+        op.index = GIFT_INDEX_markQueue;
+        // 将操作添加缓存池
+        [self.operationCache setObject:op forKey:userReuseIdentifierID];
+        
+        if (op.model.giftCount != 0) {
+            op.markAnimView.frame = self.parentView.frame;
+            op.markAnimView.originFrame = op.markAnimlistView.frame;
+            [self.markQueue addOperation:op];
+        }
+    }
+}
+
+
 
 
 

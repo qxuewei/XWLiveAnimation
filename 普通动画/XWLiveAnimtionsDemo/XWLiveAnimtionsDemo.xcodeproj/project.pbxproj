@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3212C01E96296F0001C5F0 /* XWMarkAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3212BF1E96296F0001C5F0 /* XWMarkAnimView.m */; };
 		2E4A8CA31E8F46D1002BFA13 /* UIView+XWAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A8CA21E8F46D1002BFA13 /* UIView+XWAnimate.m */; };
 		2ECBFCF21E8A11890095C128 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFCF11E8A11890095C128 /* main.m */; };
 		2ECBFCF51E8A11890095C128 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFCF41E8A11890095C128 /* AppDelegate.m */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E3212BE1E96296F0001C5F0 /* XWMarkAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWMarkAnimView.h; sourceTree = "<group>"; };
+		2E3212BF1E96296F0001C5F0 /* XWMarkAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMarkAnimView.m; sourceTree = "<group>"; };
 		2E4A8CA11E8F46D1002BFA13 /* UIView+XWAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XWAnimate.h"; sourceTree = "<group>"; };
 		2E4A8CA21E8F46D1002BFA13 /* UIView+XWAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XWAnimate.m"; sourceTree = "<group>"; };
 		2ECBFCED1E8A11890095C128 /* XWLiveAnimtionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWLiveAnimtionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +167,8 @@
 				2ECBFD281E8A39960095C128 /* XWPresentView.m */,
 				2ECBFD491E8B47940095C128 /* XWRightAnimView.h */,
 				2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */,
+				2E3212BE1E96296F0001C5F0 /* XWMarkAnimView.h */,
+				2E3212BF1E96296F0001C5F0 /* XWMarkAnimView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				2E4A8CA31E8F46D1002BFA13 /* UIView+XWAnimate.m in Sources */,
 				2ECBFD1F1E8A33410095C128 /* UIColor+XWColor.m in Sources */,
 				2ECBFD291E8A39960095C128 /* XWPresentView.m in Sources */,
+				2E3212C01E96296F0001C5F0 /* XWMarkAnimView.m in Sources */,
 				2ECBFD1C1E8A2F620095C128 /* XWShakeLabel.m in Sources */,
 				2ECBFD261E8A394A0095C128 /* XWAnimOperation.m in Sources */,
 				2ECBFD101E8A28770095C128 /* XWGiftModel.m in Sources */,

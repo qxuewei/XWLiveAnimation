@@ -128,4 +128,61 @@
     }
 }
 
+//爱心守护者
+- (IBAction)sendLover:(id)sender {
+    
+    // 礼物模型
+    long  x = arc4random() % 9+10;
+    XWGiftModel *giftModel = [[XWGiftModel alloc] init];
+    giftModel.giftId = 2;
+    giftModel.headImage = [UIImage imageNamed:@"luffy"];
+    giftModel.giftType = GIFT_TYPE_GUARD;
+    giftModel.giftPic  = @"https:// xxx";
+    giftModel.giftImage = [UIImage imageNamed:@"ic_soap_small_14th"];
+    giftModel.giftName = @"爱心守护者";
+    giftModel.giftCount = 1;
+    
+    XWUserInfo *user = [[XWUserInfo alloc] init];
+    user.userName = [NSString stringWithFormat:@"用户 %ld",x];
+    user.userId   = x;
+    user.headPic  = @"https:// xxx";
+    giftModel.user = user;
+    
+    
+    if (manager) {
+        manager.parentView = self.view;
+        // model 传入礼物模型
+        [manager animWithGiftModel:giftModel finishedBlock:^(BOOL result) {
+            
+        }];
+    }
+}
+
+//贵族面具
+- (IBAction)sendMask:(id)sender {
+    // 礼物模型
+    long  x = arc4random() % 9+10;
+    XWGiftModel *giftModel = [[XWGiftModel alloc] init];
+    giftModel.giftId = 3;
+    giftModel.giftType = GIFT_TYPE_MASK;
+    giftModel.giftPic  = @"https:// xxx";
+    giftModel.giftName = @"贵族面具";
+    giftModel.giftCount = 1;
+    
+    XWUserInfo *user = [[XWUserInfo alloc] init];
+    user.userName = [NSString stringWithFormat:@"用户 %ld",x];
+    user.userId   = x;
+    user.headPic  = @"https:// xxx";
+    giftModel.user = user;
+    if (manager) {
+        manager.parentView = self.view;
+        // model 传入礼物模型
+        [manager animWithGiftModel:giftModel finishedBlock:^(BOOL result) {
+            NSLog(@"贵族面具动画结束!");
+        }];
+    }
+}
+
+
+
 @end

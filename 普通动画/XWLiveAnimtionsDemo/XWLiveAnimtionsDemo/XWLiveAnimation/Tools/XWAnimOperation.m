@@ -26,10 +26,10 @@
     
     if (model.giftType == GIFT_TYPE_DEFAULT) { //普通动画
         op.presentView = [[XWPresentView alloc] init];
-//    }else if (model.giftType == GIFT_TYPE_GUARD) { //爱心守护者
-//        op.rightAnimView = [[XWRightAnimView alloc] init];
-//    }else if (model.giftType == GIFT_TYPE_MASK) {  //贵族面具
-//        op.markAnimView  = [[XWMarkAnimView alloc] init];
+    }else if (model.giftType == GIFT_TYPE_GUARD) { //爱心守护者
+        op.rightAnimView = [[XWRightAnimView alloc] init];
+    }else if (model.giftType == GIFT_TYPE_MASK) {  //贵族面具
+        op.markAnimView  = [[XWMarkAnimView alloc] init];
 //    }else if (model.giftType == GIFT_TYPE_OCEAN) { //海洋之星
 //        op.oceanAnimView = [[XWOceanAnimView alloc]init];
     }else if (model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
@@ -62,10 +62,10 @@
     
     if (_model.giftType == GIFT_TYPE_DEFAULT) { //普通动画
         [self addOperationWithPresentView];
-//    }else if (_model.giftType == GIFT_TYPE_GUARD) { //爱心守护者
-//        [self addOperationWithPightAnimView];
-//    }else if (_model.giftType == GIFT_TYPE_MASK) {  //贵族面具
-//        [self addOperationWithMarkAnimView];
+    }else if (_model.giftType == GIFT_TYPE_GUARD) { //爱心守护者
+        [self addOperationWithPightAnimView];
+    }else if (_model.giftType == GIFT_TYPE_MASK) {  //贵族面具
+        [self addOperationWithMarkAnimView];
 //    }else if (_model.giftType == GIFT_TYPE_OCEAN) {  //海洋之星
 //        [self addOperationWithOceanAnimView];
     }else if (_model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
@@ -138,21 +138,21 @@
 //    
 //}
 //
-//// 贵族面具动画添加到队列
-//-(void)addOperationWithMarkAnimView{
-//    
-//    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//        _markAnimView.model = _model;
-//        _markAnimView.originFrame = _markAnimView.frame;
-//        [self.markAnimlistView addSubview:_markAnimView];
-//        
-//        [self.markAnimView animateWithCompleteBlock:^(BOOL finished,NSInteger finishCount) {
-//            self.finished = finished;
-//            self.finishedBlock(finished,finishCount);
-//        }];
-//    }];
-//    
-//}
+// 贵族面具动画添加到队列
+-(void)addOperationWithMarkAnimView{
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        _markAnimView.model = _model;
+        _markAnimView.originFrame = _markAnimView.frame;
+        [self.markAnimlistView addSubview:_markAnimView];
+        
+        [self.markAnimView animateWithCompleteBlock:^(BOOL finished,NSInteger finishCount) {
+            self.finished = finished;
+            self.finishedBlock(finished,finishCount);
+        }];
+    }];
+    
+}
 
 #pragma mark -  手动触发 KVO
 - (void)setExecuting:(BOOL)executing
