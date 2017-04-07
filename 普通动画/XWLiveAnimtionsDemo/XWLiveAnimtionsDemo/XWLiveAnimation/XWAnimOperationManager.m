@@ -78,24 +78,24 @@
         [self animWithMask:model finishedBlock:^(BOOL result) {
             finishedBlock(result);
         }];
-//
-//    }else if (model.giftType == GIFT_TYPE_OCEAN) { //海洋之星
-//        
-//        [self animWithOcean:model finishedBlock:^(BOOL result) {
-//            finishedBlock(result);
-//        }];
-//        
+
+    }else if (model.giftType == GIFT_TYPE_OCEAN) { //海洋之星
+        
+        [self animWithOcean:model finishedBlock:^(BOOL result) {
+            finishedBlock(result);
+        }];
+        
     }else if (model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
         
         [self animWithCooffee:model finishedBlock:^(BOOL result) {
             finishedBlock(result);
         }];
-//
-//    }else if (model.giftType == GIFT_TYPE_CASTLE) { //女皇的城堡
-//        
-//        [self animWithCastle:model finishedBlock:^(BOOL result) {
-//            finishedBlock(result);
-//        }];
+
+    }else if (model.giftType == GIFT_TYPE_CASTLE) { //女皇的城堡
+        
+        [self animWithCastle:model finishedBlock:^(BOOL result) {
+            finishedBlock(result);
+        }];
     }
 
 }
@@ -405,14 +405,43 @@
     }
 }
 
+//海洋之星
+- (void)animWithOcean:(XWGiftModel *)model finishedBlock:(void (^)(BOOL))finishedBlock {
+    XWAnimOperation *op = [XWAnimOperation animOperationWithGiftModel:model finishedBlock:^(BOOL result, NSInteger finishCount) {
+        if (finishedBlock) {
+            finishedBlock(result);
+        }
+    }];
+    op.oceanAnimlistView = self.parentView;
+    op.index = GIFT_INDEX_oceanQueue;
+    if (op.model.giftCount != 0) {
+        op.markAnimView.frame = self.parentView.frame;
+        op.markAnimView.originFrame = self.parentView.frame;
+        [self.oceanQueue addOperation:op];
+    }
+}
 
+//女皇城堡
+- (void)animWithCastle:(XWGiftModel *)model finishedBlock:(void (^)(BOOL))finishedBlcok {
+    XWAnimOperation *op = [XWAnimOperation animOperationWithGiftModel:model finishedBlock:^(BOOL result, NSInteger finishCount) {
+        if (finishedBlcok) {
+            finishedBlcok(result);
+        }
+    }];
+    op.castleAnimlistView = self.parentView;
+    op.index = GIFT_INDEX_castleQueue;
+    if (op.model.giftCount != 0) {
+        op.castleAnimView.frame = self.parentView.frame;
+        op.castleAnimView.originFrame = self.parentView.frame;
+        [self.castleQueue addOperation:op];
+    }
+}
 
 
 
 
 #pragma mark - lazy
-- (NSOperationQueue *)queue1
-{
+- (NSOperationQueue *)queue1 {
     if (_queue1==nil) {
         _queue1 = [[NSOperationQueue alloc] init];
         _queue1.maxConcurrentOperationCount = 1;
@@ -421,8 +450,7 @@
     return _queue1;
 }
 
-- (NSOperationQueue *)queue2
-{
+- (NSOperationQueue *)queue2 {
     if (_queue2==nil) {
         _queue2 = [[NSOperationQueue alloc] init];
         _queue2.maxConcurrentOperationCount = 1;
@@ -430,8 +458,7 @@
     return _queue2;
 }
 
-- (NSOperationQueue *)rightQueue
-{
+- (NSOperationQueue *)rightQueue {
     if (_rightQueue==nil) {
         _rightQueue = [[NSOperationQueue alloc] init];
         _rightQueue.maxConcurrentOperationCount = 1;
@@ -466,8 +493,7 @@
     }
     return _castleQueue;
 }
-- (NSCache *)operationCache
-{
+- (NSCache *)operationCache {
     if (_operationCache==nil) {
         _operationCache = [[NSCache alloc] init];
     }
@@ -482,8 +508,7 @@
 }
 
 
--(void)resetDealloc
-{
+-(void)resetDealloc {
     
     if (_queue1 != nil) {
         _queue1 = nil;

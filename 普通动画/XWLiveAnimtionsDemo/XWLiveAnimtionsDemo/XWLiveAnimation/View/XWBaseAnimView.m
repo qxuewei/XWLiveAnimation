@@ -136,7 +136,7 @@
     //用户打赏信息动画
     NSString *userInfoBackground = @"";
     if (model.giftType == GIFT_TYPE_MASK) {
-        userInfoBackground = @"ic_background_`mask_14th";
+        userInfoBackground = @"ic_background_mask_14th";
     }else if (model.giftType == GIFT_TYPE_CASTLE) {
         userInfoBackground = @"ic_background_queen_14th";
     }else if (model.giftType == GIFT_TYPE_OCEAN){

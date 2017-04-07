@@ -162,11 +162,45 @@
 - (IBAction)sendMask:(id)sender {
     // 礼物模型
     long  x = arc4random() % 9+10;
+    if (!_giftModel) {
+        XWGiftModel *giftModel = [[XWGiftModel alloc] init];
+        _giftModel = giftModel;
+    }
+    _giftModel.giftId = 3;
+    _giftModel.giftType = GIFT_TYPE_MASK;
+    _giftModel.giftPic  = @"https:// xxx";
+    _giftModel.giftName = @"贵族面具";
+    if (_giftModel.giftCount == 0) {
+        _giftModel.giftCount = 1;
+    }else {
+        _giftModel.giftCount ++;
+    }
+    NSLog(@"giftModel.giftCount : %ld",_giftModel.giftCount);
+    XWUserInfo *user = [[XWUserInfo alloc] init];
+    user.userName = [NSString stringWithFormat:@"用户 %ld",x];
+    user.userId   = x;
+    user.headPic  = @"https:// xxx";
+    _giftModel.user = user;
+    if (manager) {
+        manager.parentView = self.view;
+        // model 传入礼物模型
+        [manager animWithGiftModel:_giftModel finishedBlock:^(BOOL result) {
+            
+        }];
+    }
+}
+
+//海洋之星
+- (IBAction)sendOcean:(id)sender {
+    // 礼物模型
+    long  x = arc4random() % 9+10;
     XWGiftModel *giftModel = [[XWGiftModel alloc] init];
-    giftModel.giftId = 3;
-    giftModel.giftType = GIFT_TYPE_MASK;
+    giftModel.giftId = 4;
+    giftModel.headImage = [UIImage imageNamed:@"luffy"];
+    giftModel.giftType = GIFT_TYPE_OCEAN;
     giftModel.giftPic  = @"https:// xxx";
-    giftModel.giftName = @"贵族面具";
+    giftModel.giftImage = [UIImage imageNamed:@"ic_soap_small_14th"];
+    giftModel.giftName = @"海洋之星";
     giftModel.giftCount = 1;
     
     XWUserInfo *user = [[XWUserInfo alloc] init];
@@ -174,15 +208,43 @@
     user.userId   = x;
     user.headPic  = @"https:// xxx";
     giftModel.user = user;
+    
     if (manager) {
         manager.parentView = self.view;
         // model 传入礼物模型
         [manager animWithGiftModel:giftModel finishedBlock:^(BOOL result) {
-            NSLog(@"贵族面具动画结束!");
+            
         }];
     }
 }
 
+//女皇城堡
+- (IBAction)sendCastle:(id)sender {
+    // 礼物模型
+    long  x = arc4random() % 9+10;
+    
+    XWGiftModel *giftModel = [[XWGiftModel alloc] init];
+    giftModel.giftId = 5;
+    giftModel.giftType = GIFT_TYPE_CASTLE;
+    giftModel.giftPic  = @"https:// xxx";
+    giftModel.giftImage = [UIImage imageNamed:@"ic_soap_small_14th"];
+    giftModel.giftName = @"女皇的城堡";
+    giftModel.giftCount = 1;
+    
+    XWUserInfo *user = [[XWUserInfo alloc] init];
+    user.userName = [NSString stringWithFormat:@"用户 %ld",x];
+    user.userId   = x;
+    user.headPic  = @"https:// xxx";
+    giftModel.user = user;
+
+    if (manager) {
+        manager.parentView = self.view;
+        // model 传入礼物模型
+        [manager animWithGiftModel:giftModel finishedBlock:^(BOOL result) {
+            
+        }];
+    }
+}
 
 
 @end

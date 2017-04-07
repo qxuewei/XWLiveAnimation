@@ -25,6 +25,8 @@
 		2ECBFD261E8A394A0095C128 /* XWAnimOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD251E8A394A0095C128 /* XWAnimOperation.m */; };
 		2ECBFD291E8A39960095C128 /* XWPresentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD281E8A39960095C128 /* XWPresentView.m */; };
 		2ECBFD4B1E8B47940095C128 /* XWRightAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */; };
+		2EF6E11D1E97258400360A85 /* XWOceanAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6E11C1E97258400360A85 /* XWOceanAnimView.m */; };
+		2EF6E1201E973AAD00360A85 /* XWCastleAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6E11F1E973AAD00360A85 /* XWCastleAnimView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,10 @@
 		2ECBFD281E8A39960095C128 /* XWPresentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWPresentView.m; sourceTree = "<group>"; };
 		2ECBFD491E8B47940095C128 /* XWRightAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWRightAnimView.h; sourceTree = "<group>"; };
 		2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWRightAnimView.m; sourceTree = "<group>"; };
+		2EF6E11B1E97258400360A85 /* XWOceanAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWOceanAnimView.h; sourceTree = "<group>"; };
+		2EF6E11C1E97258400360A85 /* XWOceanAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWOceanAnimView.m; sourceTree = "<group>"; };
+		2EF6E11E1E973AAD00360A85 /* XWCastleAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCastleAnimView.h; sourceTree = "<group>"; };
+		2EF6E11F1E973AAD00360A85 /* XWCastleAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCastleAnimView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,10 @@
 				2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */,
 				2E3212BE1E96296F0001C5F0 /* XWMarkAnimView.h */,
 				2E3212BF1E96296F0001C5F0 /* XWMarkAnimView.m */,
+				2EF6E11B1E97258400360A85 /* XWOceanAnimView.h */,
+				2EF6E11C1E97258400360A85 /* XWOceanAnimView.m */,
+				2EF6E11E1E973AAD00360A85 /* XWCastleAnimView.h */,
+				2EF6E11F1E973AAD00360A85 /* XWCastleAnimView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECBFCF81E8A11890095C128 /* ViewController.m in Sources */,
+				2EF6E11D1E97258400360A85 /* XWOceanAnimView.m in Sources */,
 				2ECBFD0D1E8A28110095C128 /* XWUserInfo.m in Sources */,
 				2ECBFCF51E8A11890095C128 /* AppDelegate.m in Sources */,
 				2ECBFD131E8A2A700095C128 /* XWAnimOperationManager.m in Sources */,
@@ -254,6 +265,7 @@
 				2ECBFD1F1E8A33410095C128 /* UIColor+XWColor.m in Sources */,
 				2ECBFD291E8A39960095C128 /* XWPresentView.m in Sources */,
 				2E3212C01E96296F0001C5F0 /* XWMarkAnimView.m in Sources */,
+				2EF6E1201E973AAD00360A85 /* XWCastleAnimView.m in Sources */,
 				2ECBFD1C1E8A2F620095C128 /* XWShakeLabel.m in Sources */,
 				2ECBFD261E8A394A0095C128 /* XWAnimOperation.m in Sources */,
 				2ECBFD101E8A28770095C128 /* XWGiftModel.m in Sources */,

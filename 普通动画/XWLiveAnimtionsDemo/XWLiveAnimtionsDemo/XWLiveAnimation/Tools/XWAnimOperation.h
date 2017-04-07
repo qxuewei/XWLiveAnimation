@@ -13,8 +13,8 @@
 
 #import "XWRightAnimView.h"
 #import "XWMarkAnimView.h"
-//#import "XWOceanAnimView.h"
-//#import "XWCastleAnimView.h"
+#import "XWOceanAnimView.h"
+#import "XWCastleAnimView.h"
 
 typedef NS_ENUM(NSInteger, GIFT_INDEX) {
     GIFT_INDEX_queue1          = 1,     //普通队列1
@@ -33,12 +33,12 @@ typedef NS_ENUM(NSInteger, GIFT_INDEX) {
 @property (nonatomic,strong) XWRightAnimView *rightAnimView;  //右边动画
 @property (nonatomic,strong) UIView *rightAnimlistView;
 
-//@property (nonatomic,strong) XWOceanAnimView *oceanAnimView;  //海洋之星动画
-//@property (nonatomic,strong) UIView *oceanAnimlistView;
-//
-//@property (nonatomic,strong) XWCastleAnimView *castleAnimView;  //女皇的城堡动画
-//@property (nonatomic,strong) UIView *castleAnimlistView;
-//
+@property (nonatomic,strong) XWOceanAnimView *oceanAnimView;  //海洋之星动画
+@property (nonatomic,strong) UIView *oceanAnimlistView;
+
+@property (nonatomic,strong) XWCastleAnimView *castleAnimView;  //女皇的城堡动画
+@property (nonatomic,strong) UIView *castleAnimlistView;
+
 @property (nonatomic,strong) XWMarkAnimView *markAnimView;      //贵族面具动画
 @property (nonatomic,strong) UIView *markAnimlistView;
 

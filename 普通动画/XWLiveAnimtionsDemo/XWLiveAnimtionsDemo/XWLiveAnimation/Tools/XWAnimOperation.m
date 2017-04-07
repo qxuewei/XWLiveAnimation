@@ -30,12 +30,12 @@
         op.rightAnimView = [[XWRightAnimView alloc] init];
     }else if (model.giftType == GIFT_TYPE_MASK) {  //贵族面具
         op.markAnimView  = [[XWMarkAnimView alloc] init];
-//    }else if (model.giftType == GIFT_TYPE_OCEAN) { //海洋之星
-//        op.oceanAnimView = [[XWOceanAnimView alloc]init];
+    }else if (model.giftType == GIFT_TYPE_OCEAN) { //海洋之星
+        op.oceanAnimView = [[XWOceanAnimView alloc]init];
     }else if (model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
         op.rightAnimView = [[XWRightAnimView alloc] init];
-//    }else if (model.giftType == GIFT_TYPE_CASTLE) { //女皇的城堡
-//        op.castleAnimView = [[XWCastleAnimView alloc] init];
+    }else if (model.giftType == GIFT_TYPE_CASTLE) { //女皇的城堡
+        op.castleAnimView = [[XWCastleAnimView alloc] init];
     }
     op.model = model;
     op.finishedBlock = finishedBlock;
@@ -52,8 +52,8 @@
     return self;
 }
 
+// 添加到队列时调用
 - (void)start {
-    // 添加到队列时调用
     if ([self isCancelled]) {
         self.finished = YES;
         return;
@@ -66,12 +66,12 @@
         [self addOperationWithPightAnimView];
     }else if (_model.giftType == GIFT_TYPE_MASK) {  //贵族面具
         [self addOperationWithMarkAnimView];
-//    }else if (_model.giftType == GIFT_TYPE_OCEAN) {  //海洋之星
-//        [self addOperationWithOceanAnimView];
+    }else if (_model.giftType == GIFT_TYPE_OCEAN) {  //海洋之星
+        [self addOperationWithOceanAnimView];
     }else if (_model.giftType == GIFT_TYPE_COOFFEE) { //咖啡印记
         [self addOperationWithPightAnimView];
-//    }else if (_model.giftType == GIFT_TYPE_CASTLE) {  //女皇的城堡
-//        [self addOperationWithCastleAnimView];
+    }else if (_model.giftType == GIFT_TYPE_CASTLE) {  //女皇的城堡
+        [self addOperationWithCastleAnimView];
     }
 }
 
@@ -106,38 +106,38 @@
     }];
 }
 
-//// 海洋之星动画添加到队列
-//-(void)addOperationWithOceanAnimView{
-//    
-//    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//        _oceanAnimView.model = _model;
-//        _oceanAnimView.originFrame = _oceanAnimView.frame;
-//        [self.oceanAnimlistView addSubview:_oceanAnimView];
-//        
-//        [self.oceanAnimView animateWithCompleteBlock:^(BOOL finished,NSInteger finishCount) {
-//            self.finished = finished;
-//            self.finishedBlock(finished,finishCount);
-//        }];
-//    }];
-//    
-//}
-//
-//// 女皇的城堡动画添加到队列
-//-(void)addOperationWithCastleAnimView{
-//    
-//    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//        _castleAnimView.model = _model;
-//        _castleAnimView.originFrame = _castleAnimView.frame;
-//        [self.castleAnimlistView addSubview:_castleAnimView];
-//        
-//        [self.castleAnimView animateWithCompleteBlock:^(BOOL finished,NSInteger finishCount) {
-//            self.finished = finished;
-//            self.finishedBlock(finished,finishCount);
-//        }];
-//    }];
-//    
-//}
-//
+// 海洋之星动画添加到队列
+-(void)addOperationWithOceanAnimView{
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        _oceanAnimView.model = _model;
+        _oceanAnimView.originFrame = _oceanAnimView.frame;
+        [self.oceanAnimlistView addSubview:_oceanAnimView];
+        
+        [self.oceanAnimView animateWithCompleteBlock:^(BOOL finished,NSInteger finishCount) {
+            self.finished = finished;
+            self.finishedBlock(finished,finishCount);
+        }];
+    }];
+    
+}
+
+// 女皇的城堡动画添加到队列
+-(void)addOperationWithCastleAnimView{
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        _castleAnimView.model = _model;
+        _castleAnimView.originFrame = _castleAnimView.frame;
+        [self.castleAnimlistView addSubview:_castleAnimView];
+        
+        [self.castleAnimView animateWithCompleteBlock:^(BOOL finished,NSInteger finishCount) {
+            self.finished = finished;
+            self.finishedBlock(finished,finishCount);
+        }];
+    }];
+    
+}
+
 // 贵族面具动画添加到队列
 -(void)addOperationWithMarkAnimView{
     

@@ -55,6 +55,9 @@
     [self addSubview:_feather1MaskAnimView];
     [self addSubview:_feather2MaskAnimView];
 }
+
+
+
 - (void)setModel:(XWGiftModel *)model {
     
     //烟雾
