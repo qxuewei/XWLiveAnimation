@@ -83,6 +83,13 @@
                                             <action selector="sendCastle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FsB-cY-urV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-9I-He4">
+                                        <rect key="frame" x="148" y="46" width="31" height="30"/>
+                                        <state key="normal" title="客机"/>
+                                        <connections>
+                                            <action selector="sendPlane:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GiO-CW-TIt"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -93,6 +100,7 @@
                                     <constraint firstItem="I38-uq-IDw" firstAttribute="leading" secondItem="hSx-zh-Bdq" secondAttribute="trailing" constant="8" id="BHe-eS-WXK"/>
                                     <constraint firstItem="Erb-BH-JJp" firstAttribute="leading" secondItem="pwZ-pW-5FY" secondAttribute="leading" constant="8" id="IYm-px-YqH"/>
                                     <constraint firstItem="Iac-Ys-vpo" firstAttribute="leading" secondItem="Erb-BH-JJp" secondAttribute="trailing" constant="8" id="KrN-7A-r97"/>
+                                    <constraint firstItem="aEX-9I-He4" firstAttribute="leading" secondItem="Iac-Ys-vpo" secondAttribute="trailing" constant="8" id="NpM-4n-edM"/>
                                     <constraint firstItem="lLG-fJ-uXl" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="Sy6-rU-pFT"/>
                                     <constraint firstItem="njl-OS-bWi" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="aFl-HP-Qgp"/>
                                     <constraint firstItem="9AH-fr-V4h" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="cNQ-kW-Mqo"/>
@@ -102,6 +110,7 @@
                                     <constraint firstItem="hSx-zh-Bdq" firstAttribute="leading" secondItem="njl-OS-bWi" secondAttribute="trailing" constant="8" id="g6m-Mo-H6P"/>
                                     <constraint firstItem="Iac-Ys-vpo" firstAttribute="top" secondItem="lLG-fJ-uXl" secondAttribute="bottom" constant="8" id="ga2-jf-goI"/>
                                     <constraint firstItem="I38-uq-IDw" firstAttribute="top" secondItem="pwZ-pW-5FY" secondAttribute="top" constant="8" id="rPE-B3-pP6"/>
+                                    <constraint firstItem="aEX-9I-He4" firstAttribute="top" secondItem="hQt-bT-rXp" secondAttribute="bottom" constant="8" id="uPW-aj-O6i"/>
                                     <constraint firstItem="Erb-BH-JJp" firstAttribute="top" secondItem="9AH-fr-V4h" secondAttribute="bottom" constant="8" id="yxP-O8-w6y"/>
                                 </constraints>
                             </view>

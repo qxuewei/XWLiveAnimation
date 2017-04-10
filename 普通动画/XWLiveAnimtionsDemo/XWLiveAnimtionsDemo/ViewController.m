@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "XWLiveGiftAnimationHeader.h"
 
+#import "XWPlaneView.h"
+
 @interface ViewController () {
     
     XWAnimOperationManager *manager;
@@ -245,6 +247,14 @@
         }];
     }
 }
+#define Bounds [UIScreen mainScreen].bounds.size
+- (IBAction)sendPlane:(UIButton *)sender {
+    XWPlaneView *plane = [XWPlaneView loadPlaneViewWithPoint:CGPointMake(Bounds.width + 232, 0)];
+    //plane.curveControlAndEndPoints 用法同carView一样
+    [plane addAnimationsMoveToPoint:CGPointMake(Bounds.width, 100) endPoint:CGPointMake(-500, 410)];
+    [self.view addSubview:plane];
+}
+
 
 
 @end

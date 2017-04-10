@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cCv-X6-Ckc" customClass="XWPlaneView">
+            <rect key="frame" x="0.0" y="0.0" width="232" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="liveAnimResource.bundle/plane-head.png" translatesAutoresizingMaskIntoConstraints="NO" id="WPp-Ia-o8o">
+                    <rect key="frame" x="14" y="36" width="70" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="liveAnimResource.bundle/plane-screw-1-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Q2-vk-jaf">
+                    <rect key="frame" x="6" y="17" width="39" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="liveAnimResource.bundle/plane-tail.png" translatesAutoresizingMaskIntoConstraints="NO" id="SmM-CD-0Sh">
+                    <rect key="frame" x="58" y="0.0" width="174" height="84"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="planeScrew" destination="0Q2-vk-jaf" id="3fb-Fk-qCV"/>
+            </connections>
+            <point key="canvasLocation" x="-77" y="6"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="liveAnimResource.bundle/plane-head.png" width="16" height="16"/>
+        <image name="liveAnimResource.bundle/plane-screw-1-1.png" width="16" height="16"/>
+        <image name="liveAnimResource.bundle/plane-tail.png" width="16" height="16"/>
+    </resources>
+</document>

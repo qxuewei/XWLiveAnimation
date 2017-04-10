@@ -25,6 +25,9 @@
 		2ECBFD261E8A394A0095C128 /* XWAnimOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD251E8A394A0095C128 /* XWAnimOperation.m */; };
 		2ECBFD291E8A39960095C128 /* XWPresentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD281E8A39960095C128 /* XWPresentView.m */; };
 		2ECBFD4B1E8B47940095C128 /* XWRightAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */; };
+		2EF2B9101E9B160000AABB56 /* XWPlaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B90F1E9B160000AABB56 /* XWPlaneView.m */; };
+		2EF2B9121E9B166200AABB56 /* XWPlaneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B9111E9B166200AABB56 /* XWPlaneView.xib */; };
+		2EF2B9151E9B20D000AABB56 /* liveAnimResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B9141E9B20D000AABB56 /* liveAnimResource.bundle */; };
 		2EF6E11D1E97258400360A85 /* XWOceanAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6E11C1E97258400360A85 /* XWOceanAnimView.m */; };
 		2EF6E1201E973AAD00360A85 /* XWCastleAnimView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6E11F1E973AAD00360A85 /* XWCastleAnimView.m */; };
 /* End PBXBuildFile section */
@@ -65,6 +68,10 @@
 		2ECBFD281E8A39960095C128 /* XWPresentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWPresentView.m; sourceTree = "<group>"; };
 		2ECBFD491E8B47940095C128 /* XWRightAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWRightAnimView.h; sourceTree = "<group>"; };
 		2ECBFD4A1E8B47940095C128 /* XWRightAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWRightAnimView.m; sourceTree = "<group>"; };
+		2EF2B90E1E9B160000AABB56 /* XWPlaneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWPlaneView.h; sourceTree = "<group>"; };
+		2EF2B90F1E9B160000AABB56 /* XWPlaneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWPlaneView.m; sourceTree = "<group>"; };
+		2EF2B9111E9B166200AABB56 /* XWPlaneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWPlaneView.xib; sourceTree = "<group>"; };
+		2EF2B9141E9B20D000AABB56 /* liveAnimResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = liveAnimResource.bundle; sourceTree = "<group>"; };
 		2EF6E11B1E97258400360A85 /* XWOceanAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWOceanAnimView.h; sourceTree = "<group>"; };
 		2EF6E11C1E97258400360A85 /* XWOceanAnimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWOceanAnimView.m; sourceTree = "<group>"; };
 		2EF6E11E1E973AAD00360A85 /* XWCastleAnimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCastleAnimView.h; sourceTree = "<group>"; };
@@ -126,6 +133,7 @@
 		2ECBFD071E8A27E00095C128 /* XWLiveAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				2EF2B9131E9B20C500AABB56 /* Resource */,
 				2ECBFD081E8A27E00095C128 /* Model */,
 				2ECBFD091E8A27E00095C128 /* Tools */,
 				2ECBFD0A1E8A27E00095C128 /* View */,
@@ -179,8 +187,19 @@
 				2EF6E11C1E97258400360A85 /* XWOceanAnimView.m */,
 				2EF6E11E1E973AAD00360A85 /* XWCastleAnimView.h */,
 				2EF6E11F1E973AAD00360A85 /* XWCastleAnimView.m */,
+				2EF2B90E1E9B160000AABB56 /* XWPlaneView.h */,
+				2EF2B90F1E9B160000AABB56 /* XWPlaneView.m */,
+				2EF2B9111E9B166200AABB56 /* XWPlaneView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2EF2B9131E9B20C500AABB56 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2EF2B9141E9B20D000AABB56 /* liveAnimResource.bundle */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +263,8 @@
 			files = (
 				2ECBFD001E8A11890095C128 /* LaunchScreen.storyboard in Resources */,
 				2ECBFCFD1E8A11890095C128 /* Assets.xcassets in Resources */,
+				2EF2B9121E9B166200AABB56 /* XWPlaneView.xib in Resources */,
+				2EF2B9151E9B20D000AABB56 /* liveAnimResource.bundle in Resources */,
 				2ECBFCFB1E8A11890095C128 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +286,7 @@
 				2ECBFD1F1E8A33410095C128 /* UIColor+XWColor.m in Sources */,
 				2ECBFD291E8A39960095C128 /* XWPresentView.m in Sources */,
 				2E3212C01E96296F0001C5F0 /* XWMarkAnimView.m in Sources */,
+				2EF2B9101E9B160000AABB56 /* XWPlaneView.m in Sources */,
 				2EF6E1201E973AAD00360A85 /* XWCastleAnimView.m in Sources */,
 				2ECBFD1C1E8A2F620095C128 /* XWShakeLabel.m in Sources */,
 				2ECBFD261E8A394A0095C128 /* XWAnimOperation.m in Sources */,
@@ -389,11 +411,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZE4J77P8N2;
 				INFOPLIST_FILE = XWLiveAnimtionsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiuxuewei.github.XWLiveAnimtionsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -401,11 +425,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZE4J77P8N2;
 				INFOPLIST_FILE = XWLiveAnimtionsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiuxuewei.github.XWLiveAnimtionsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
