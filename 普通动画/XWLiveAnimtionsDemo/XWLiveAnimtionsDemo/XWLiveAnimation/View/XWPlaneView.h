@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^FinishPlaneBlock)();
+
 @interface XWPlaneView : UIView
 /**
  *  加载动画视图
  *  @return 返回你需要的动画视图
  */
+
 + (nullable instancetype)loadPlaneViewWithPoint:(CGPoint)point;
 
 
@@ -23,6 +26,6 @@
  *  @param movePoints 开始的位置(出发点)
  *  @param endPoint   最终动画所在停留的位置
  */
-- (void)addAnimationsMoveToPoint:(CGPoint)movePoints endPoint:(CGPoint)endPoint;
+- (void)addAnimationsMoveToPoint:(CGPoint)movePoints endPoint:(CGPoint)endPoint finishPlaneBlock:(FinishPlaneBlock _Nullable )finishPlaneBlock;
 
 @end

@@ -8,9 +8,11 @@
 
 #import "XWPlaneView.h"
 
-@interface XWPlaneView ()
+@interface XWPlaneView () <CAAnimationDelegate>
 @property (nonatomic, strong) UIImageView *planeWing;
 @property (weak, nonatomic) IBOutlet UIImageView *planeScrew;
+
+@property (nonatomic, copy) FinishPlaneBlock finishPlaneAnimBlock;
 
 /**
  *  需要几个控制点就设置几个:
@@ -65,8 +67,10 @@
     [_planeScrew startAnimating];
 }
 
-- (void)addAnimationsMoveToPoint:(CGPoint)movePoints endPoint:(CGPoint)endPoint{
-    
+- (void)addAnimationsMoveToPoint:(CGPoint)movePoints endPoint:(CGPoint)endPoint finishPlaneBlock:(FinishPlaneBlock _Nullable)finishPlaneBlock{
+    if (finishPlaneBlock) {
+        self.finishPlaneAnimBlock = finishPlaneBlock;
+    }
     CAKeyframeAnimation *position = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, movePoints.x, movePoints.y);
@@ -101,6 +105,26 @@
     animationGroup.fillMode = kCAFillModeForwards;
     animationGroup.animations = @[scaleAnimation,position];
     [self.layer addAnimation:animationGroup forKey:@"planeViews"];
+    
+}
+
+#pragma CAAnimationDelegate
+/* Called when the animation begins its active duration. */
+
+- (void)animationDidStart:(CAAnimation *)anim{
+//    NSLog(@"animationDidStart");
+}
+
+/* Called when the animation either completes its active duration or
+ * is removed from the object it is attached to (i.e. the layer). 'flag'
+ * is true if the animation reached the end of its active duration
+ * without being removed. */
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+//    NSLog(@"animationDidStop");
+    if (self.finishPlaneAnimBlock) {
+        self.finishPlaneAnimBlock();
+    }
 }
 
 

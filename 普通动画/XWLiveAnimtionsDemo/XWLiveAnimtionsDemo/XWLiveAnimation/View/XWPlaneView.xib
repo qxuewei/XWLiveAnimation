@@ -35,7 +35,7 @@
             <connections>
                 <outlet property="planeScrew" destination="0Q2-vk-jaf" id="3fb-Fk-qCV"/>
             </connections>
-            <point key="canvasLocation" x="-77" y="6"/>
+            <point key="canvasLocation" x="13" y="68"/>
         </view>
     </objects>
     <resources>

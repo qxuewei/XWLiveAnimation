@@ -132,7 +132,7 @@
 
 //爱心守护者
 - (IBAction)sendLover:(id)sender {
-    
+
     // 礼物模型
     long  x = arc4random() % 9+10;
     XWGiftModel *giftModel = [[XWGiftModel alloc] init];
@@ -251,7 +251,9 @@
 - (IBAction)sendPlane:(UIButton *)sender {
     XWPlaneView *plane = [XWPlaneView loadPlaneViewWithPoint:CGPointMake(Bounds.width + 232, 0)];
     //plane.curveControlAndEndPoints 用法同carView一样
-    [plane addAnimationsMoveToPoint:CGPointMake(Bounds.width, 100) endPoint:CGPointMake(-500, 410)];
+    [plane addAnimationsMoveToPoint:CGPointMake(Bounds.width, 100) endPoint:CGPointMake(-500, 410) finishPlaneBlock:^{
+        NSLog(@"飞机动画结束!");
+    }];
     [self.view addSubview:plane];
 }
 
