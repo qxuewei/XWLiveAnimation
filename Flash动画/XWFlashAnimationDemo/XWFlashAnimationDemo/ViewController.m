@@ -22,7 +22,7 @@
 
 - (IBAction)showLocalFlashAnim:(UIButton *)sender {
     FlashGiftModel *giftModel = [[FlashGiftModel alloc] init];
-    giftModel.animName = @"tanghulu";
+    giftModel.animName = @"test1";
     [[XWFlashManager shareInstance] playFlashAnimation:giftModel endBlock:^{
         NSLog(@"测试动画播放完毕");
     }];

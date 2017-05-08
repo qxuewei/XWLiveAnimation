@@ -14,7 +14,10 @@
 @property (nonatomic, assign) NSUInteger imageAnimationDuration;
 @property (nonatomic, copy) NSString *imageName;
 
-//@property (nonatomic, strong) NSArray *sequentialImages;
+// 定义一个字典存放序列帧数组
+
+//判断是横屏竖屏
+#define iSLandscapeRight [UIApplication sharedApplication].statusBarOrientation != UIDeviceOrientationPortrait ? YES : NO
 
 @end
 
@@ -29,6 +32,12 @@
  @param imageAnimationDuration 动画执行时间
  */
 - (void)showSequentialImagesWithImageName:(NSString *)imageName imagesCount:(NSUInteger)imagesCount imageAnimationDuration:(NSUInteger)imageAnimationDuration {
+    if (iSLandscapeRight) {
+        self.contentMode = UIViewContentModeBottom;
+    }else{
+        self.contentMode = UIViewContentModeScaleToFill;
+    }
+    self.clipsToBounds = YES;
     self.imageName = imageName;
     self.imagesCount = imagesCount;
     self.imageAnimationDuration = imageAnimationDuration;
@@ -36,7 +45,10 @@
     self.animationDuration = self.imageAnimationDuration;// 序列帧全部播放完所用时间
     self.animationRepeatCount = 1;// 序列帧动画重复次数
     [self startAnimating];//开始动画
-    [self performSelector:@selector(clearAinimationImageMemory) withObject:nil afterDelay:self.imageAnimationDuration];// 性能优化的重点来了，此处我在执行完序列帧以后我执行了一个清除内存的操作
+//    [self performSelector:@selector(clearAinimationImageMemory) withObject:nil afterDelay:self.imageAnimationDuration];/
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.imageAnimationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self clearAinimationImageMemory];
+    });
 }
 // 清除animationImages所占用内存
 - (void)clearAinimationImageMemory {
@@ -45,7 +57,7 @@
 }
 
 
--(NSArray *)sequentialImagesWithImageName:(NSString *)imageName imagesCount:(NSUInteger)imagesCount{
+- (NSArray *)sequentialImagesWithImageName:(NSString *)imageName imagesCount:(NSUInteger)imagesCount{
     NSMutableArray *imageArray = [[NSMutableArray alloc] init];
     if (imageArray.count == 0) {
         NSString *bundlePath = [NSBundle mainBundle].bundlePath;
@@ -56,11 +68,28 @@
             }else{
                 imagePath = [NSString stringWithFormat:@"%@/%@%zd@2x.png",bundlePath,imageName,i];
             }
-            UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+            UIImage *image = [XWSequentialImageView scaleImage:[UIImage imageWithContentsOfFile:imagePath]];
             [imageArray addObject:image];
         }
     }
     return imageArray.copy;
 }
+
+/// 等比例缩放图片
++ (UIImage *)scaleImage:(UIImage *)image {
+    CGFloat originW = image.size.width;
+    CGFloat originH = image.size.height;
+    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
+    CGFloat w = screenH > screenW ? screenH : screenW;
+    CGFloat h = w * originH / originW;
+    UIGraphicsBeginImageContext(CGSizeMake(w, h));
+    [image drawInRect:CGRectMake(0, 0, w, h)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+
 
 @end

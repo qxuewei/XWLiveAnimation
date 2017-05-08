@@ -25,6 +25,6 @@
 }
 - (IBAction)showSequentialImagesClick:(UIButton *)sender {
     
-    [self.showSequentialImageView showSequentialImagesWithImageName:@"dlw_yj010" imagesCount:34 imageAnimationDuration:3];
+    [self.showSequentialImageView showSequentialImagesWithImageName:@"dlw_yj01_0" imagesCount:34 imageAnimationDuration:3];
 }
 @end
