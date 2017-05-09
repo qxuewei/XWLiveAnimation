@@ -7,13 +7,10 @@
 //
 
 #import "ViewController.h"
-//#import "UIImageView+XWSequential.h"
 #import "XWSequentialImageView.h"
+#import "XWSequentialImageModel.h"
 
 @interface ViewController ()
-
-@property (nonatomic, strong) NSArray *sequentialImages;
-
 @property (weak, nonatomic) IBOutlet XWSequentialImageView *showSequentialImageView;
 
 @end
@@ -24,7 +21,9 @@
     [super viewDidLoad];
 }
 - (IBAction)showSequentialImagesClick:(UIButton *)sender {
-    
-    [self.showSequentialImageView showSequentialImagesWithImageName:@"dlw_yj01_0" imagesCount:34 imageAnimationDuration:3];
+    XWSequentialImageModel *sequentialImageMode = [XWSequentialImageModel creatSequentialImageModelWithSequentialImageName:@"dlw_yj01_0" sequentialImagesCount:[NSNumber numberWithInt:34] sequentialImageAnimationDuration:[NSNumber numberWithInt:3]];
+    [self.showSequentialImageView showSequentialImagesWithSequentialImageMode:sequentialImageMode WithCompletion:^(BOOL animationFinished) {
+        NSLog(@"++ 所有动画结束!!! %ld",animationFinished);
+    }];
 }
 @end

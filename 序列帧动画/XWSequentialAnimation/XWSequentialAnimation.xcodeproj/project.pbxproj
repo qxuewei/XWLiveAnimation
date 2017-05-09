@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E13B2321EC1E4FC00622475 /* XWSequentialImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13B22F1EC1E4FC00622475 /* XWSequentialImageModel.m */; };
+		2E13B2331EC1E4FC00622475 /* XWSequentialImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13B2311EC1E4FC00622475 /* XWSequentialImageView.m */; };
 		2E6AC7A31EBF605600A13E3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC7A21EBF605600A13E3D /* main.m */; };
 		2E6AC7A61EBF605600A13E3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC7A51EBF605600A13E3D /* AppDelegate.m */; };
 		2E6AC7A91EBF605600A13E3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC7A81EBF605600A13E3D /* ViewController.m */; };
@@ -25,7 +27,6 @@
 		2E6AC82E1EBF61A100A13E3D /* yj01_tb0110008@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6AC8021EBF61A100A13E3D /* yj01_tb0110008@2x.png */; };
 		2E6AC82F1EBF61A100A13E3D /* yj01_tb0110009@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6AC8031EBF61A100A13E3D /* yj01_tb0110009@2x.png */; };
 		2E6AC8301EBF61A100A13E3D /* yj01_tb0110010@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6AC8041EBF61A100A13E3D /* yj01_tb0110010@2x.png */; };
-		2E6AC8331EBF68BA00A13E3D /* XWSequentialImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC8321EBF68BA00A13E3D /* XWSequentialImageView.m */; };
 		2EF7A8FF1EC073F50059F336 /* dlw_yj01_001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7A8BA1EC073F50059F336 /* dlw_yj01_001@2x.png */; };
 		2EF7A9001EC073F50059F336 /* dlw_yj01_002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7A8BB1EC073F50059F336 /* dlw_yj01_002@2x.png */; };
 		2EF7A9011EC073F50059F336 /* dlw_yj01_003@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7A8BC1EC073F50059F336 /* dlw_yj01_003@2x.png */; };
@@ -115,6 +116,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E13B22E1EC1E4FC00622475 /* XWSequentialImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWSequentialImageModel.h; sourceTree = "<group>"; };
+		2E13B22F1EC1E4FC00622475 /* XWSequentialImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWSequentialImageModel.m; sourceTree = "<group>"; };
+		2E13B2301EC1E4FC00622475 /* XWSequentialImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWSequentialImageView.h; sourceTree = "<group>"; };
+		2E13B2311EC1E4FC00622475 /* XWSequentialImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWSequentialImageView.m; sourceTree = "<group>"; };
 		2E6AC79E1EBF605600A13E3D /* XWSequentialAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWSequentialAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6AC7A21EBF605600A13E3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E6AC7A41EBF605600A13E3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,8 +146,6 @@
 		2E6AC8021EBF61A100A13E3D /* yj01_tb0110008@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yj01_tb0110008@2x.png"; sourceTree = "<group>"; };
 		2E6AC8031EBF61A100A13E3D /* yj01_tb0110009@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yj01_tb0110009@2x.png"; sourceTree = "<group>"; };
 		2E6AC8041EBF61A100A13E3D /* yj01_tb0110010@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yj01_tb0110010@2x.png"; sourceTree = "<group>"; };
-		2E6AC8311EBF68BA00A13E3D /* XWSequentialImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWSequentialImageView.h; sourceTree = "<group>"; };
-		2E6AC8321EBF68BA00A13E3D /* XWSequentialImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWSequentialImageView.m; sourceTree = "<group>"; };
 		2EF7A8BA1EC073F50059F336 /* dlw_yj01_001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dlw_yj01_001@2x.png"; sourceTree = "<group>"; };
 		2EF7A8BB1EC073F50059F336 /* dlw_yj01_002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dlw_yj01_002@2x.png"; sourceTree = "<group>"; };
 		2EF7A8BC1EC073F50059F336 /* dlw_yj01_003@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dlw_yj01_003@2x.png"; sourceTree = "<group>"; };
@@ -239,6 +242,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E13B22D1EC1E4FC00622475 /* XWSequentialAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2E13B22E1EC1E4FC00622475 /* XWSequentialImageModel.h */,
+				2E13B22F1EC1E4FC00622475 /* XWSequentialImageModel.m */,
+				2E13B2301EC1E4FC00622475 /* XWSequentialImageView.h */,
+				2E13B2311EC1E4FC00622475 /* XWSequentialImageView.m */,
+			);
+			path = XWSequentialAnimation;
+			sourceTree = "<group>";
+		};
 		2E6AC7951EBF605600A13E3D = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +276,7 @@
 		2E6AC7A01EBF605600A13E3D /* XWSequentialAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				2E13B22D1EC1E4FC00622475 /* XWSequentialAnimation */,
 				2EF7A8751EC06EE40059F336 /* dlw_yj01_0 */,
 				2E6AC7FA1EBF61A100A13E3D /* dlw_yj01_tb01 */,
 				2E6AC7A41EBF605600A13E3D /* AppDelegate.h */,
@@ -273,8 +288,6 @@
 				2E6AC7AF1EBF605600A13E3D /* LaunchScreen.storyboard */,
 				2E6AC7B21EBF605600A13E3D /* Info.plist */,
 				2E6AC7A11EBF605600A13E3D /* Supporting Files */,
-				2E6AC8311EBF68BA00A13E3D /* XWSequentialImageView.h */,
-				2E6AC8321EBF68BA00A13E3D /* XWSequentialImageView.m */,
 			);
 			path = XWSequentialAnimation;
 			sourceTree = "<group>";
@@ -614,8 +627,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6AC7A91EBF605600A13E3D /* ViewController.m in Sources */,
+				2E13B2331EC1E4FC00622475 /* XWSequentialImageView.m in Sources */,
+				2E13B2321EC1E4FC00622475 /* XWSequentialImageModel.m in Sources */,
 				2E6AC7A61EBF605600A13E3D /* AppDelegate.m in Sources */,
-				2E6AC8331EBF68BA00A13E3D /* XWSequentialImageView.m in Sources */,
 				2E6AC7A31EBF605600A13E3D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
