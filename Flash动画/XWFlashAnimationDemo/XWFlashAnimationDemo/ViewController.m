@@ -10,6 +10,9 @@
 #import "XWFlashManager.h"
 #import "FlashGiftModel.h"
 
+//判断是横屏竖屏
+#define iSLandscapeRight [UIApplication sharedApplication].statusBarOrientation != UIDeviceOrientationPortrait ? YES : NO
+
 @interface ViewController ()
 
 @end
@@ -22,7 +25,11 @@
 
 - (IBAction)showLocalFlashAnim:(UIButton *)sender {
     FlashGiftModel *giftModel = [[FlashGiftModel alloc] init];
-    giftModel.animName = @"test1";
+    if (iSLandscapeRight) {
+        giftModel.animName = @"test2-heng";
+    }else{
+        giftModel.animName = @"test2";
+    }
     [[XWFlashManager shareInstance] playFlashAnimation:giftModel endBlock:^{
         NSLog(@"测试动画播放完毕");
     }];
