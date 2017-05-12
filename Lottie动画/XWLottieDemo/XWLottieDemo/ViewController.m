@@ -18,10 +18,9 @@
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self showLottieAnimationWithName:@"zlw_tb_thg"];
+    [self.view addSubview:self.lottieAnimationView];
 }
 
 /**
@@ -31,12 +30,12 @@
  */
 - (void)showLottieAnimationWithName:(NSString *)name {
     self.lottieAnimationView = [LOTAnimationView animationNamed:name];
-    self.lottieAnimationView.frame =  CGRectMake(0, 44, 125, 102);
-    //    self.lottieAnimationView.frame =  self.view.bounds;
+//    self.lottieAnimationView.frame =  CGRectMake(0, 44, 125, 102);
+        self.lottieAnimationView.frame =  self.view.bounds;
     self.lottieAnimationView.center = CGPointMake(self.view.center.x, self.lottieAnimationView.center.y);
     [self.view addSubview:self.lottieAnimationView];
     //循环播放
-    _lottieAnimationView.loopAnimation = YES;
+    _lottieAnimationView.loopAnimation = NO;// YES;
     //从URL加载
     //    LAAnimationView *animation = [[LAAnimationView alloc] initWithContentsOfURL:[NSURL URLWithString:URL]];
     //设置动画的进度
@@ -48,10 +47,7 @@
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    self.lottieAnimationView.frame =  self.view.bounds;
-    [_lottieAnimationView playWithCompletion:^(BOOL animationFinished) {
-        NSLog(@"++ 动画播放完成!");
-    }];
+    [self showLottieAnimationWithName:@"love"];
 }
 
 - (IBAction)showAnim:(id)sender {
@@ -61,6 +57,7 @@
 - (LOTAnimationView *)lottieAnimationView {
     if(!_lottieAnimationView){
         _lottieAnimationView = [[LOTAnimationView alloc] init];
+        _lottieAnimationView.frame = [UIScreen mainScreen].bounds;
     }
     return _lottieAnimationView;
 }
