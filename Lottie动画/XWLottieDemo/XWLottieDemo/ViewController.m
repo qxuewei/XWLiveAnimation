@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import <Lottie/Lottie.h>
 
+//tabBar_huadan tabBar_lianpu
+#define kName @"dlw_y_IOS_s"
+
 //判断是横屏竖屏
 #define iSLandscapeRight [UIApplication sharedApplication].statusBarOrientation != UIDeviceOrientationPortrait ? YES : NO
 
@@ -21,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.lottieAnimationView];
+    
+    [self showLottieAnimationWithName:kName];
 }
 
 /**
@@ -29,9 +34,12 @@
  @param name 动画JSON文件名称 - 保证程序中存在否则崩溃
  */
 - (void)showLottieAnimationWithName:(NSString *)name {
+    [self.lottieAnimationView removeFromSuperview];
     self.lottieAnimationView = [LOTAnimationView animationNamed:name];
-//    self.lottieAnimationView.frame =  CGRectMake(0, 44, 125, 102);
+//    self.lottieAnimationView.frame =  CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 98, 44, 44);
+    //375 667
         self.lottieAnimationView.frame =  self.view.bounds;
+//    self.view.backgroundColor = [UIColor colorWithWhite:0.6 alpha:0.6];
     self.lottieAnimationView.center = CGPointMake(self.view.center.x, self.lottieAnimationView.center.y);
     [self.view addSubview:self.lottieAnimationView];
     //循环播放
@@ -42,12 +50,25 @@
     //animation.animationProgress = 0
     [_lottieAnimationView playWithCompletion:^(BOOL animationFinished) {
         NSLog(@"++ 动画播放完成!");
+        [_lottieAnimationView removeFromSuperview];
     }];
 }
 
+/*
+ 
+ dlw_tb_yjh : 
+ 
+ 
+ */
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self showLottieAnimationWithName:@"love"];
+    NSString *name ;
+    if (iSLandscapeRight) {
+        name = [NSString stringWithFormat:@"%@_hp",kName];
+    }else{
+        name = kName;
+    }
+    [self showLottieAnimationWithName:name];
 }
 
 - (IBAction)showAnim:(id)sender {
