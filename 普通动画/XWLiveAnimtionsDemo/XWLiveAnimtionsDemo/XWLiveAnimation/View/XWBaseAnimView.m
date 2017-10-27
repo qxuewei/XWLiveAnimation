@@ -10,10 +10,8 @@
 #import "XWLiveGiftAnimationHeader.h"
 
 @implementation XWBaseAnimView
-
-- (instancetype)init {
-    
-    if (self = [super init]) {
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
         //初始化公共
         [self setupInit];
         //自定义初始化视图
@@ -23,7 +21,9 @@
     }
     return self;
 }
-
++(void)setupInit{
+    
+}
 -(void)setupInit{
     
     _originFrame = self.frame;
@@ -195,8 +195,6 @@
         } completion:nil];
         
     }];
-    
-    
 }
 
 

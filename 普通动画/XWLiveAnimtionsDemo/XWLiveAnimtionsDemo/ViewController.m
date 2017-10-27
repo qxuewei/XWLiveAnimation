@@ -63,7 +63,7 @@
     giftModel.giftName = @"一束鲜花";
     giftModel.giftCount = 1;
     _giftModel = giftModel;
-    
+
     XWUserInfo *user = [[XWUserInfo alloc] init];
     user.userName = [NSString stringWithFormat:@"用户 %ld",x];
     user.userId   = x;
