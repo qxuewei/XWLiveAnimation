@@ -111,14 +111,14 @@
     NSMutableArray *imageArray = [[NSMutableArray alloc] init];
     if (imageArray.count == 0) {
         NSString *bundlePath = [NSBundle mainBundle].bundlePath;
-        for (int i = 1; i <= imagesCount; i++) {
+        for (int i = 0; i < imagesCount; i++) {
             NSString *imagePath = [[NSString alloc] init];
 //            if (i <= 9) {
 //                imagePath = [NSString stringWithFormat:@"%@/%@0%zd@2x.png",bundlePath,imageName,i];
 //            }else{
 //                imagePath = [NSString stringWithFormat:@"%@/%@%zd@2x.png",bundlePath,imageName,i];
 //            }
-            imagePath = [NSString stringWithFormat:@"%@/%@%zd@2x.png",bundlePath,imageName,i];
+            imagePath = [NSString stringWithFormat:@"%@/%@%zd.png",bundlePath,imageName,i];
             UIImage *image = [XWSequentialImageView scaleImage:[UIImage imageWithContentsOfFile:imagePath]];
             [imageArray addObject:image];
         }

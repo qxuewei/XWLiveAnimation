@@ -21,7 +21,7 @@
     [super viewDidLoad];
 }
 - (IBAction)showSequentialImagesClick:(UIButton *)sender {
-    XWSequentialImageModel *sequentialImageMode = [XWSequentialImageModel creatSequentialImageModelWithSequentialImageName:@"dlw_yj01_0" sequentialImagesCount:[NSNumber numberWithInt:34] sequentialImageAnimationDuration:[NSNumber numberWithInt:3]];
+    XWSequentialImageModel *sequentialImageMode = [XWSequentialImageModel creatSequentialImageModelWithSequentialImageName:@"giftBig_animation_shyl_ios_s_" sequentialImagesCount:[NSNumber numberWithInt:81] sequentialImageAnimationDuration:[NSNumber numberWithInt:10]];
     [self.showSequentialImageView showSequentialImagesWithSequentialImageMode:sequentialImageMode WithCompletion:^(BOOL animationFinished) {
         NSLog(@"++ 所有动画结束!!! %ld",animationFinished);
     }];
