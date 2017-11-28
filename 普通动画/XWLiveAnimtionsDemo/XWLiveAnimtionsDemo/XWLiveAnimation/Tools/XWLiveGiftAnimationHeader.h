@@ -29,9 +29,10 @@
 //#import "XWMarkAnimView.h"
 
 
-#define KLivePresentViewWidth 200.0
-#define KLivePresentViewHight 30.0
+#define KLivePresentViewWidth 300.0
+#define KLivePresentViewHight 50.0
 #define KLivePresentViewWidthSpace 10.0
+#define KLivePresentViewDistanceSpace 4.0   // 普通礼物上下间距
 
 #define kLiveQueue2FooterSpace ( 275.0)   //如需适配横屏需要在此处修改
 #define kLiveQueue2OriginY (SCREEN_HEIGHT - kLiveQueue2FooterSpace - KLivePresentViewHight)

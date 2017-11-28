@@ -29,12 +29,11 @@
     self.nameLabel.textColor  = [UIColor whiteColor];
     self.nameLabel.font = [UIFont systemFontOfSize:12];
     
-    self.giftLabel.textColor  = [UIColor colorWithHex:0x00eaff];
+    self.giftLabel.textColor  = [UIColor colorWithHex:0x3ae3fa];
     self.giftLabel.font = [UIFont systemFontOfSize:12];
     
     _bgImageView = [[UIImageView alloc] init];
-    _bgImageView.backgroundColor = [UIColor blackColor];
-    _bgImageView.alpha = 0.3;
+    _bgImageView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     _headImageView = [[UIImageView alloc] init];
     _giftImageView = [[UIImageView alloc] init];
     
@@ -58,21 +57,19 @@
     
     [super layoutSubviews];
     
-    _headImageView.frame = CGRectMake(KLivePresentViewWidthSpace, 0, self.frame.size.height, self.frame.size.height);
-    _headImageView.layer.cornerRadius = self.frame.size.height / 2;
+    _headImageView.frame = CGRectMake(KLivePresentViewWidthSpace + KLivePresentViewDistanceSpace, KLivePresentViewDistanceSpace, self.frame.size.height - KLivePresentViewDistanceSpace * 2, self.frame.size.height - KLivePresentViewDistanceSpace * 2);
+    _headImageView.layer.cornerRadius = _headImageView.frame.size.height * 0.5;
     _headImageView.layer.masksToBounds = YES;
     
-    _giftImageView.frame = CGRectMake(self.frame.size.width - KGiftImageViewWidth + KLivePresentViewWidthSpace, self.frame.size.height - KGiftImageViewWidth, KGiftImageViewWidth, KGiftImageViewWidth);
     
     self.nameLabel.frame = CGRectMake(_headImageView.frame.size.width + KLivePresentViewWidthSpace*2, 0, KLivePresentViewWidth - KGiftImageViewWidth - self.frame.size.height, self.frame.size.height/2);
     self.giftLabel.frame = CGRectMake(self.nameLabel.frame.origin.x, CGRectGetMaxY(self.headImageView.frame) - self.frame.size.height/2-2, self.nameLabel.frame.size.width, self.frame.size.height/2);
     
-    _bgImageView.frame = self.bounds;
-    _bgImageView.frame = CGRectMake(KLivePresentViewWidthSpace, 0, self.frame.size.width - KLivePresentViewWidthSpace, self.frame.size.height);
-    
-    _bgImageView.layer.cornerRadius = self.frame.size.height / 2;
+    _bgImageView.layer.cornerRadius = self.frame.size.height * 0.5;
     _bgImageView.layer.masksToBounds = YES;
     
+    _bgImageView.frame = CGRectMake(KLivePresentViewWidthSpace, 0, 200, self.frame.size.height);
+    _giftImageView.frame = CGRectMake(CGRectGetMaxX(_bgImageView.frame), self.frame.size.height - KGiftImageViewWidth, KGiftImageViewWidth, KGiftImageViewWidth);
     self.skLabel.frame = CGRectMake(CGRectGetMaxX(_giftImageView.frame),self.frame.size.height-KLiveShakeLabelHight, KLiveShakeLabelWidth, KLiveShakeLabelHight);
     
 }
@@ -82,13 +79,18 @@
 - (void)setModel:(XWGiftModel *)model {
     
     self.nameLabel.text = model.user.userName;
-    self.giftLabel.text = [NSString stringWithFormat:@"送出【%@】",model.giftName];
+    self.giftLabel.text = [NSString stringWithFormat:@"%@",model.giftName];
     self.giftCount = model.giftCount;
     
     _headImageView.image = model.headImage;
     _giftImageView.image = model.giftImage;
+    
+    
 }
 
+- (void)setupCustomViewFrameWithWidth:(CGFloat)width {
+    
+}
 
 - (void)animateWithCompleteBlock:(completeBlock)completed{
     
@@ -98,7 +100,9 @@
         [self shakeNumberLabel];
     }];
     self.completeBlock = completed;
-    
+}
+
+- (void)giftImageMoveAnimation {
     
 }
 
