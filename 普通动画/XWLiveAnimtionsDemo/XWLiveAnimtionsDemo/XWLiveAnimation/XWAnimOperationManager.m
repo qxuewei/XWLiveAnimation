@@ -67,7 +67,7 @@
         }];
         
     }
-    /*
+    
     else if (model.giftType == GIFT_TYPE_GUARD) { //爱心守护者
         
         [self animWithGuard:model finishedBlock:^(BOOL result) {
@@ -98,7 +98,6 @@
             finishedBlock(result);
         }];
     }
-     */
 
 }
 
